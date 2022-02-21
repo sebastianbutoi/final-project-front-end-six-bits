@@ -1,4 +1,4 @@
-function Browse() {
-  return <h1>Browse</h1>;
+function About() {
+  return <h1>About</h1>;
 }
-export default Browse;
+export default About;
