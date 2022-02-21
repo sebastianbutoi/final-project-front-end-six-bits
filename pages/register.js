@@ -1,14 +1,14 @@
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 
-function About() {
+function Register() {
   return (
     <div>
       <NavBar />
-      ABOUT PAGE
+      UNDER CONSTRUCTION REGISTER
       <Footer />
     </div>
   );
 }
 
-export default About;
+export default Register;

@@ -1,14 +1,13 @@
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
-
-function About() {
+function LogIn() {
   return (
     <div>
       <NavBar />
-      ABOUT PAGE
+      UNDER CONSTRUCTION
       <Footer />
     </div>
   );
 }
 
-export default About;
+export default LogIn;
