@@ -1,5 +1,5 @@
 function Browse() {
-  return <h1>Browse</h1>;
+  return <div>Browse</div>;
 }
 
 export default Browse;
