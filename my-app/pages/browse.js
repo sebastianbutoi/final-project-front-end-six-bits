@@ -17,6 +17,6 @@ function Browse() {
     getData();
   }, []);
 
-  return <h1>Browse</h1>;
+  return <div></div>;
 }
 export default Browse;
