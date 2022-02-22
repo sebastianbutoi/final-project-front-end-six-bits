@@ -8,7 +8,7 @@ function Browse() {
   useEffect(() => {
     async function getData() {
       const response = await fetch(
-        `https://sixbits-project.herokuapp.com/api/posts`
+        ``
       );
       const data = await response.json();
       setData(data);
