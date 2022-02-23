@@ -21,7 +21,6 @@ function Browse() {
   }, []);
   return (
     <div>
-      <h1>hELLO</h1>
       <OptionsBar />
       <div className={css.wrapper}>
         {data.length === 0 ? (
