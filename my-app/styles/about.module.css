@@ -1,0 +1,112 @@
+.about {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.firstheader {
+  text-align: center;
+  align-items: center;
+  margin: 30px 20px;
+  padding: 10px;
+}
+
+.cardHorizontal {
+  display: flex;
+  flex: 1 1 auto;
+  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+}
+.p {
+  padding: 70px 0;
+  margin: 20px;
+  width: 25em;
+}
+.paragraph {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+#button1 {
+  width: 300px;
+  padding: 15px;
+  background-color: #f76e11;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  margin: 100px;
+  border: none;
+}
+#button2 {
+  width: 300px;
+  padding: 15px;
+  background-color: #f76e11;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  margin: 100px;
+  border: none;
+  display: flex;
+}
+#button3 {
+  width: 300px;
+  padding: 15px;
+  background-color: #f76e11;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  margin: 100px;
+  margin-right: 100px;
+  display: flex;
+  border: none;
+}
+#button1,
+#button2,
+#button3 {
+  display: inline-block;
+  /* additional code */
+}
+#tasteless {
+  font-family: cursive;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.item1 {
+  margin: 30px 20px;
+}
+.item2 {
+  margin: 30px 20px;
+}
+.item3 {
+  margin: 30px 20px;
+}
+.image1 {
+  border-radius: 8px;
+  padding: 12px;
+  display: block;
+  height: 300px;
+  width: 300px;
+  border-radius: 20%;
+}
+.image2 {
+  border-radius: 8px;
+  padding: 12px;
+  display: block;
+  border-radius: 20%;
+  height: 300px;
+  width: 300px;
+}
+.image3 {
+  border-radius: 8px;
+  padding: 12px;
+  display: block;
+  height: 300px;
+  width: 300px;
+  border-radius: 20%;
+}
+.slogan {
+  font-size: x-large;
+}
+.sloganContainer {
+  text-align: center;
+}
