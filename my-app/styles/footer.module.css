@@ -1,0 +1,54 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: black;
+}
+
+.footerContent {
+  display: flex;
+  background-color: #1f5300;
+  justify-content: space-around;
+  color: white;
+}
+
+.footerText {
+  text-align: center;
+}
+
+/* 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  width: 100%;
+  height: 200px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+} */
+.socialMedia svg {
+  color: white;
+  margin: 20px;
+  font-size: 50px;
+  cursor: pointer;
+}
+.socialMedia svg:hover {
+  color: orange;
+}
+.footer p {
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .socialMedia svg {
+    color: white;
+    margin: 20px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
