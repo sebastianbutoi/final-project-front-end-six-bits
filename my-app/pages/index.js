@@ -4,11 +4,6 @@ import styles from "../styles/Home.module.css";
 import Footer from "../Components/Footer";
 
 function Home() {
-  return (
-    <div>
-      Hello
-      <Footer />
-    </div>
-  );
+  return <div>Hello</div>;
 }
 export default Home;

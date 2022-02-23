@@ -1,9 +1,18 @@
 .footer {
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  height: 2.5rem;
+  background-color: black;
+}
+
+.footerContent {
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
   color: white;
+}
+
+.footerText {
   text-align: center;
 }

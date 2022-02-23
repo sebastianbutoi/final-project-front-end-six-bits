@@ -1,43 +1,41 @@
 import { useEffect, useState } from "react";
-import Card from "../Components/Card";
+import CardDisplay from "../Components/Card";
+import css from "../styles/browse.module.css";
+import Footer from "../Components/Footer";
+import OptionsBar from "../Components/OptionsBar";
 
 const URL = process.env.NEXT_PUBLIC_API_URL;
 
 function Browse() {
-  const [cardData, setCardData] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    async function getData() {
-      const response = await fetch(``);
-      const data = await response.json();
-      setCardData(data.payload);
-      console.log(data.payload[0]);
+    async function fetchData() {
+      const res = await fetch(
+        "https://sixbits-project.herokuapp.com/api/posts"
+      );
+      const data = await res.json();
+      setData([...data.payload]);
     }
-    getData();
+    fetchData();
   }, []);
-
   return (
     <div>
-      {cardData.length === 0 ? (
-        <div></div>
-      ) : (
-        cardData.map(function (data, index) {
-          return (
-            <Card
-              key={index}
-              title={data.title}
-              date={data.date}
-              description={data.description}
-              email={data.email}
-              full_name={data.full_name}
-              phone_number={data.phone_number}
-            />
-          );
-        })
-      )}
+      <h1>hELLO</h1>
+      <OptionsBar />
+      <div className={css.wrapper}>
+        {data.length === 0 ? (
+          <></>
+        ) : (
+          data.map((item, index) => {
+            return <CardDisplay key={index} data={item} />;
+          })
+        )}
+      </div>
     </div>
   );
 }
+
 export default Browse;
 
 // date, description, email, full_name, phone_number, title
