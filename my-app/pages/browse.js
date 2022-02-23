@@ -10,12 +10,14 @@ function Browse() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+
     async function fetchData() {
       const res = await fetch(
         "https://sixbits-project.herokuapp.com/api/posts"
       );
       const data = await res.json();
       setData([...data.payload]);
+
     }
     fetchData();
   }, []);
