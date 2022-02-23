@@ -8,7 +8,7 @@ function Browse() {
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(``);
+
       const data = await response.json();
       setCardData(data.payload);
       console.log(data.payload[0]);
