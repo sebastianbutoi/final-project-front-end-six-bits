@@ -32,9 +32,12 @@ function Navbar() {
         <Link href="/signin">
           <a>Sign In</a>
         </Link>
-        <button onClick={toggleNavbar}>
-          <ReorderIcon />
-        </button>
+        <Link href="/signup">
+          <a className={css.signUp}>Sign Up</a>
+        </Link>
+        {/* <button onClick={toggleNavbar}>
+          <ReorderIcon className={css.menuIcon} />
+        </button> */}
       </div>
     </div>
   );
