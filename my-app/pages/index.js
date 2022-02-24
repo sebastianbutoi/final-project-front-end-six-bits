@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import vegImage from "../public/images/produce-box.jpg";
+import vegImage from "../public/images/produce-box.jpeg";
 import Image from "next/image";
 
 import css from "../styles/Home.module.css";
