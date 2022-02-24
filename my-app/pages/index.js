@@ -7,14 +7,13 @@ import css from "../styles/Home.module.css";
 function Home() {
   return (
     <div className={css.home}>
-      <div className={css.home}>
         <h1 className={css.title}>SalVeg</h1>
         {/* <Image src={vegImage} alt="produce" ></Image> */}
-        <p className={css.text}>Shapeless Not Tasteless</p>
+        <h2 className={css.text}>Shapeless Not Tasteless</h2>
         <Link href="/browse">
-        <a className={css.link}>Get Started</a>
+          <a className={css.link}>Get Started</a>
         </Link>
-      </div>
+      
     </div>
   );
 }

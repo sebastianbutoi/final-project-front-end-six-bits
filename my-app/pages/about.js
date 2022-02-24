@@ -1,5 +1,5 @@
+
 import css from "../styles/about.module.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
 
 function About() {

@@ -9,13 +9,13 @@ function Footer() {
     <footer className={css.footer}>
       <div className={css.footerContent}>
         <div>
-          <p className={css.footerText}>
+          <div className={css.footerText}>
             <div className={css.socialMedia}>
               <InstagramIcon /> <TwitterIcon /> <FacebookIcon />{" "}
               <LinkedInIcon />
             </div>
             <p className={css.footerText}>&copy; SalVeg</p>
-          </p>
+          </div>
         </div>
       </div>
     </footer>
