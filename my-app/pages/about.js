@@ -3,6 +3,9 @@ import css from "../styles/about.module.css";
 import { Carousel } from "react-bootstrap";
 import Image from "next/image";
 import Head from "next/head"
+import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg"
+import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg"
+
 
 function About() {
   return (
@@ -20,10 +23,10 @@ function About() {
         <Carousel.Item>
           <Image
             className="d-block w-100"
-            src="/public/images/aboutPageImages/farmwaste.jpeg"
+            src={Farmwaste}
             alt="First slide"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
           />
           <Carousel.Caption>
             <h3 id={css.secondheader}>
@@ -36,10 +39,11 @@ function About() {
         <Carousel.Item>
           <Image
             className="d-block w-100"
-            src="/public/images/aboutPageImages/Vegpic.jpeg"
+            src={Vegimage2}
             alt="Second slide"
-            width={20}
-            height={20}
+            layout="fill"
+            // width={100}
+            // height={100}
           />
 
           <Carousel.Caption>
@@ -55,8 +59,8 @@ function About() {
             className="d-block w-100"
             src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Third slide"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
           />
           <Carousel.Caption>
             <h3 id={css.container}>
@@ -74,8 +78,8 @@ function About() {
             id={css.image}
             src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Card image cap"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
           ></Image>
 
           <div className={css.item2}>
@@ -103,8 +107,8 @@ function About() {
             id={css.image}
             src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Card image cap"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
           ></Image>
           <p className={css.paragraph}>
             {" "}
@@ -130,22 +134,22 @@ function About() {
             className={css.image1}
             src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Salveg"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
           ></Image>
           <Image
             className={css.image2}
             src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Get involved image"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
           ></Image>
           <Image
             className={css.image3}
             src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="donate image"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
           ></Image>
         </div>
         <div className={css.container}>
