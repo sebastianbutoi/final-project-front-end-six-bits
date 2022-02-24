@@ -1,9 +1,15 @@
 import css from "../styles/about.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
+import Image from "next/image";
+import Head from "next/head"
 
 function About() {
   return (
+    <>
+    <Head>
+      <title>SalVeg | About</title>
+    </Head>
     <div className={css.about}>
       <h1 className={css.firstheader}>
         It is estimated that 3.6 million tonnes of food is wasted before it
@@ -12,10 +18,12 @@ function About() {
 
       <Carousel>
         <Carousel.Item>
-          <img
+          <Image
             className="d-block w-100"
-            src="https://image.shutterstock.com/shutterstock/photos/739462552/display_1500/stock-photo-attractive-fruit-stall-with-price-tags-739462552.jpg"
+            src="/public/images/aboutPageImages/farmwaste.jpeg"
             alt="First slide"
+            width={20}
+            height={20}
           />
           <Carousel.Caption>
             <h3 id={css.secondheader}>
@@ -26,10 +34,12 @@ function About() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
+          <Image
             className="d-block w-100"
-            src="https://media.istockphoto.com/photos/domestic-compost-heap-picture-id172481514?s=612x612"
+            src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Second slide"
+            width={20}
+            height={20}
           />
 
           <Carousel.Caption>
@@ -41,10 +51,12 @@ function About() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
+          <Image
             className="d-block w-100"
-            src="https://image.shutterstock.com/shutterstock/photos/750282589/display_1500/stock-photo-food-in-the-garbage-container-750282589.jpg"
+            src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Third slide"
+            width={20}
+            height={20}
           />
           <Carousel.Caption>
             <h3 id={css.container}>
@@ -57,12 +69,14 @@ function About() {
 
       <div>
         <div className={css.container}>
-          <img
+          <Image
             className={css.item1}
             id={css.image}
-            src="https://image.shutterstock.com/image-photo/hand-putting-lid-on-garbage-600w-344303534.jpg"
+            src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Card image cap"
-          ></img>
+            width={20}
+            height={20}
+          ></Image>
 
           <div className={css.item2}>
             <h4>WHY IS FOOD WASTED AT THE FARM?</h4>
@@ -84,12 +98,14 @@ function About() {
         </div>
 
         <div className={css.container}>
-          <img
+          <Image
             className={css.item1}
             id={css.image}
-            src="https://image.shutterstock.com/image-photo/vegetables-cucumbers-peppers-tomatoes-red-600w-1136960387.jpg"
+            src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Card image cap"
-          ></img>
+            width={20}
+            height={20}
+          ></Image>
           <p className={css.paragraph}>
             {" "}
             Here at SalVeg, We&apos;re salvaging perfectly good vegetables and
@@ -110,21 +126,27 @@ function About() {
         </div>
 
         <div className={css.container}>
-          <img
+          <Image
             className={css.image1}
-            src="https://media.istockphoto.com/vectors/veg-heart-organic-farm-illustration-healthy-lifestyle-vector-design-vector-id872742572?b=1&k=20&m=872742572&s=170667a&w=0&h=dz_7Vz6fBTiMPLUnqVKaf0cWgA_cSJjSBRhu6oxysu4="
+            src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Salveg"
-          ></img>
-          <img
+            width={20}
+            height={20}
+          ></Image>
+          <Image
             className={css.image2}
-            src="https://www.seekpng.com/png/detail/355-3559915_for-our-community-get-involved-icon-png.png"
+            src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="Get involved image"
-          ></img>
-          <img
+            width={20}
+            height={20}
+          ></Image>
+          <Image
             className={css.image3}
-            src="https://beyondfood.org.uk/wp-content/uploads/2020/12/donate-icon3.jpg"
+            src="/public/images/aboutPageImages/Vegpic.jpeg"
             alt="donate image"
-          ></img>
+            width={20}
+            height={20}
+          ></Image>
         </div>
         <div className={css.container}>
           <button type="button Salveg-button" id={css.button1}>
@@ -139,6 +161,7 @@ function About() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 export default About;
