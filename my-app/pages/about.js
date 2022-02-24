@@ -102,7 +102,7 @@ function About() {
               id={css.image}
               src={Vegimage2}
               alt="Card image cap"
-              width={200}
+              width={100}
               height={100}
             ></Image>
 
