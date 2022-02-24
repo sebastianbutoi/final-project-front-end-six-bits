@@ -21,14 +21,14 @@ function About() {
           style={{
             position: "relative",
             width: "50%",
-            paddingBottom: "20%",
+            margin: "0 auto",
           }}
         >
           <Carousel.Item
             style={{
               position: "relative",
               width: "100%",
-              height: "10000px",
+              height: "500px",
               justifySelf: "center",
             }}
           >
@@ -51,6 +51,7 @@ function About() {
             style={{
               position: "relative",
               width: "100%",
+              height: "500px",
               paddingBottom: "20%",
             }}
           >
@@ -73,6 +74,7 @@ function About() {
             style={{
               position: "relative",
               width: "100%",
+              height: "500px",
               paddingBottom: "20%",
             }}
           >
@@ -100,7 +102,7 @@ function About() {
               id={css.image}
               src={Vegimage2}
               alt="Card image cap"
-              width={100}
+              width={200}
               height={100}
             ></Image>
 
