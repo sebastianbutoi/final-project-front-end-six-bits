@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import vegImage from "../public/images/produce-box.jpg";
+import vegImage from "../public/images/produce-box.jpeg";
 import Image from "next/image";
 
 import css from "../styles/Home.module.css";
@@ -12,7 +12,7 @@ function Home() {
         {/* <Image src={vegImage} alt="produce" ></Image> */}
         <p className={css.text}>Shapeless Not Tasteless</p>
         <Link href="/browse">
-          <a>Get Started</a>
+        <a className={css.link}>Get Started</a>
         </Link>
       </div>
     </div>
