@@ -4,6 +4,9 @@ import Image from "next/image";
 import Head from "next/head";
 import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg";
 import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg";
+import { BiDonateHeart} from "react-icons/bi"
+
+
 
 function About() {
   return (
@@ -102,8 +105,8 @@ function About() {
               id={css.image}
               src={Vegimage2}
               alt="Card image cap"
-              width={200}
-              height={100}
+              width={400}
+              height={400}
             ></Image>
 
             <div className={css.item2}>
@@ -131,8 +134,8 @@ function About() {
               id={css.image}
               src={Vegimage2}
               alt="Card image cap"
-              width={100}
-              height={100}
+              width={400}
+              height={400}
             ></Image>
             <p className={css.paragraph}>
               {" "}
@@ -158,23 +161,17 @@ function About() {
               className={css.image1}
               src={Vegimage2}
               alt="Salveg"
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             ></Image>
             <Image
               className={css.image2}
               src={Vegimage2}
               alt="Get involved image"
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             ></Image>
-            <Image
-              className={css.image3}
-              src={Vegimage2}
-              alt="donate image"
-              width={100}
-              height={100}
-            ></Image>
+    <BiDonateHeart value={{ color: "blue", className: "global-class-name" }}/>
           </div>
           <div className={css.container}>
             <button type="button Salveg-button" id={css.button1}>
