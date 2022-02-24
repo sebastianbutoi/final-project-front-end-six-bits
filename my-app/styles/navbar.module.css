@@ -9,7 +9,7 @@
   border-bottom: white 300px;
   font-family: "Chewy", cursive;
   font-size: 2em;
-  border-bottom: 1px solid rgb(71, 71, 71);
+  /* border-bottom: 1px solid rgb(71, 71, 71); */
 }
 .navbar .leftSide {
   flex: 50%;
@@ -104,7 +104,25 @@
 }
 
 .signUp {
-  border: 1px solid black;
-  border-radius: 2em;
-  background-color: #f7c151;
+  color: white;
+  border: none;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  justify-content: center;
+  background-color:#f7c151;
+  padding: 3px;
+  height: 30px;
+  width: 150px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.signUp:hover{
+  background-color: orange ;
+  color:black;
 }

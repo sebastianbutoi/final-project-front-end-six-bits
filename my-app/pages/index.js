@@ -12,7 +12,7 @@ function Home() {
         {/* <Image src={vegImage} alt="produce" ></Image> */}
         <p className={css.text}>Shapeless Not Tasteless</p>
         <Link href="/browse">
-          <a>Get Started</a>
+        <a className={css.link}>Get Started</a>
         </Link>
       </div>
     </div>
