@@ -4,6 +4,9 @@ import Image from "next/image";
 import Head from "next/head";
 import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg";
 import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg";
+import { BiDonateHeart} from "react-icons/bi"
+
+
 
 function About() {
   return (
@@ -21,14 +24,14 @@ function About() {
           style={{
             position: "relative",
             width: "50%",
-            paddingBottom: "20%",
+            margin: "0 auto",
           }}
         >
           <Carousel.Item
             style={{
               position: "relative",
               width: "100%",
-              height: "10000px",
+              height: "500px",
               justifySelf: "center",
             }}
           >
@@ -51,6 +54,7 @@ function About() {
             style={{
               position: "relative",
               width: "100%",
+              height: "500px",
               paddingBottom: "20%",
             }}
           >
@@ -73,6 +77,7 @@ function About() {
             style={{
               position: "relative",
               width: "100%",
+              height: "500px",
               paddingBottom: "20%",
             }}
           >
@@ -100,8 +105,13 @@ function About() {
               id={css.image}
               src={Vegimage2}
               alt="Card image cap"
+<<<<<<< HEAD
+              width={400}
+              height={400}
+=======
               width={100}
               height={100}
+>>>>>>> 604263f2f4ff685ff566e92a11bc279ded95e490
             ></Image>
 
             <div className={css.item2}>
@@ -129,8 +139,8 @@ function About() {
               id={css.image}
               src={Vegimage2}
               alt="Card image cap"
-              width={100}
-              height={100}
+              width={400}
+              height={400}
             ></Image>
             <p className={css.paragraph}>
               {" "}
@@ -156,23 +166,17 @@ function About() {
               className={css.image1}
               src={Vegimage2}
               alt="Salveg"
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             ></Image>
             <Image
               className={css.image2}
               src={Vegimage2}
               alt="Get involved image"
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             ></Image>
-            <Image
-              className={css.image3}
-              src={Vegimage2}
-              alt="donate image"
-              width={100}
-              height={100}
-            ></Image>
+    <BiDonateHeart value={{ color: "blue", className: "global-class-name" }}/>
           </div>
           <div className={css.container}>
             <button type="button Salveg-button" id={css.button1}>
