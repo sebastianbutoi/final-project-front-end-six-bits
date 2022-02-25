@@ -1,5 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
 
 .home {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rightSide {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.leftSide {
+  padding-top: 100px;
+}
+
+.titleText {
+  white-space: pre;
+  font-size: 5vw;
+  font-family: "Chewy";
+  color: #0c0c40;
+}
+
+.altColour {
+  color: #06b23c;
+}
+
+.subText {
+  font-weight: 500;
+  color: #0c0c40;
+}
+
+.link {
+  border: 3px solid black;
+  background-color: #f7c151;
+  border-radius: 50px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  transition: background-color 1s, color 1s, border 1s;
+}
+
+.link:hover {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  border: 3px solid #000000;
+}
+
+/* .home {
   width: 100%;
   height: 90vh;
   display: flex;
@@ -11,15 +61,25 @@
   width: auto;
   margin-left: 50px;
 }
-.title{
+.title {
   justify-content: center;
   line-height: 0 !important;
   align-items: center;
   font-size: 90px;
   height: 60px;
   font-weight: 50;
-  color: orange;
+  color: #0c0c40;
+  font-family: "Chewy", cursive;
 }
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.titleAlt {
+  color: #06b23c;
+}
+
 .text {
   padding: 0;
   font-size: 40px;
@@ -27,13 +87,13 @@
   color: orange;
 }
 
-.link{
+.link {
   color: white;
   text-align: center;
   border: none;
   cursor: pointer;
   justify-content: center;
-  background-color:#f7c151;
+  background-color: #f7c151;
   padding: 5px;
   height: 35px;
   width: 180px;
@@ -45,10 +105,10 @@
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
-.link:hover{
+.link:hover {
   background: orange;
   color: white;
-}
+} */
 /* @media only screen and (max-width: 650px) {
   .home {
     justify-content: center;
@@ -76,4 +136,4 @@
     color: white;
   } 
   
-}z */
+}z */ ;

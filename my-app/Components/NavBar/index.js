@@ -21,16 +21,16 @@ function Navbar() {
       </div>
       <div className={css.rightSide}>
         <Link href="/">
-          <a>Home</a>
+          <a className={css.link}>Home</a>
         </Link>
         <Link href="/browse">
-          <a>Browse</a>
+          <a className={css.link}>Browse</a>
         </Link>
         <Link href="/about">
-          <a>About</a>
+          <a className={css.link}>About</a>
         </Link>
         <Link href="/signin">
-          <a>Sign In</a>
+          <a className={css.link}>Sign In</a>
         </Link>
         <Link href="/signup">
           <a className={css.signUp}>Sign Up</a>
