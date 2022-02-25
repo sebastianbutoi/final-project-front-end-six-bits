@@ -10,7 +10,74 @@ import SalvegIcon from "/public/images/aboutPageImages/salveg.png";
 
 function About() {
   return (
-    <>
+    <div className={css.container}>
+      <Head>
+        <title>SalVeg | About</title>
+      </Head>
+      <h1 className={css.title}>
+        It is estimated that 3.6 million tonnes of food is wasted before it
+        leaves UK farms
+      </h1>
+      <div className={css.contentContainer}>
+        <div className={css.content}>
+          <Image
+            className={css.contentImage}
+            id={css.image}
+            src={Vegimage2}
+            alt="Card image cap"
+            width={400}
+            height={300}
+          ></Image>
+          <div className={css.textContent}>
+            <h2 className={css.contentTitle}>
+              Why is food wasted at the farm?
+            </h2>
+            <p>
+              It&apos;s time for us to comprehend that food comes in all
+              different colours, shapes and size. Increasingly in the UK, our
+              food system prizes uniformity over taste and the environment,
+              which means that fruit and vegetables that look slightly out of
+              place in supermarkets&apos; standards are wasted and ignored. The
+              reality is that we live in a world where on-demand everything is
+              the norm. This means farmers are left with surplus produce, If we
+              want berries in winter and Parsnips in summer, we can walk into
+              almost any supermarket and it&apos;s available.
+            </p>
+          </div>
+        </div>
+        <div className={css.content}>
+          <Image
+            className={css.contentImage}
+            id={css.image}
+            src={Vegimage2}
+            alt="Card image cap"
+            width={400}
+            height={300}
+          ></Image>
+          <div className={css.textContent}>
+            <h2 className={css.contentTitle}>You can make a difference</h2>
+            <p>
+              It&apos;s time for us to comprehend that food comes in all
+              different colours, shapes and size. shapless not tasteless..
+              Increasingly in the UK, our food system prizes uniformity over
+              taste and the environment, which means that fruit and vegetables
+              that look slightly out of place in supermarkets&apos; standards
+              are wasted and ignored. The reality is that we live in a world
+              where on-demand everything is the norm. This means farmers are
+              left with surplus produce, If we want berries in winter and
+              Parsnips in summer, we can walk into almost any supermarket and
+              it&apos;s available.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+export default About;
+
+{
+  /* <>
       <Head>
         <title>SalVeg | About</title>
       </Head>
@@ -180,7 +247,5 @@ function About() {
           </div>
         </div>
       </div>
-    </>
-  );
+    </> */
 }
-export default About;
