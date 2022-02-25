@@ -103,8 +103,8 @@ function About() {
               id={css.image}
               src={Vegimage2}
               alt="Card image cap"
-              width={400}
-              height={400}
+              width={1000}
+              height={1000}
             ></Image>
 
             <div className={css.item2}>
