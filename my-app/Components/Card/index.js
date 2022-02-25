@@ -1,25 +1,40 @@
-import Image from "next/image";
+import { Card, Col, Row } from "react-bootstrap";
 import cucumber from "../../public/images/cucumber.jpg";
-import css from "../../styles/card.module.css";
+import Image from "next/image";
 
-const Card = ({ data }) => {
+const Vegcard = ({ data }) => {
   return (
-    <div className={css.card}>
-      <div className={css.cardBody}>
-        <Image src={cucumber} alt="cucumber"></Image>
-        <h2 className={css.cardTitle}>{data.title}</h2>
-        <p>{data.date}</p>
-        <p className={css.cardDescription}>{data.description}</p>
-        <p>{data.email}</p>
-        <p>{data.full_name}</p>
-        <p>{data.location}</p>
-        <p>{data.phone_number}</p>
-        <p>£{data.price}</p>
-      </div>
-    </div>
+    <Row xs={1} s={1} md={2} lg={3} className="g-4">
+      {Array.from({ length: data.length }).map((_, idx) => (
+        <Col key={idx}>
+          <Card>
+            <Image
+              variant="top"
+              alt={data[idx]?.title}
+              src={cucumber}
+              height={266}
+              width={160}
+            />
+            <Card.Body
+              style={{
+                textAlign: "center",
+                fontFamily: "Roboto",
+                fontWeight: "bold",
+              }}
+            >
+              <Card.Title>{data[idx]?.title}</Card.Title>
+              <Card.Text>{data[idx]?.description}</Card.Text>
+              <Card.Text>{data[idx]?.date}</Card.Text>
+              <Card.Text>£{data[idx]?.price}</Card.Text>
+              <Card.Text>{data[idx]?.location}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
   );
 };
 
-export default Card;
+export default Vegcard;
 
 //
