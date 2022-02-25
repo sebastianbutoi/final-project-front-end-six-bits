@@ -7,6 +7,7 @@ import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg";
 import { BiDonateHeart } from "react-icons/bi";
 import Helpinghand from "/public/images/aboutPageImages/helpinghand.png";
 import SalvegIcon from "/public/images/aboutPageImages/salveg.png";
+
 function About() {
   return (
     <>
