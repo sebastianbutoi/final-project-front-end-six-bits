@@ -5,6 +5,8 @@ import Head from "next/head";
 import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg";
 import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg";
 import { BiDonateHeart} from "react-icons/bi"
+import Helpinghand from "/public/images/aboutPageImages/helpinghand.png"
+import SalvegIcon from "/public/images/aboutPageImages/salveg.png"
 
 
 
@@ -105,18 +107,14 @@ function About() {
               id={css.image}
               src={Vegimage2}
               alt="Card image cap"
-<<<<<<< HEAD
-              width={400}
-              height={400}
-=======
-              width={100}
-              height={100}
->>>>>>> 604263f2f4ff685ff566e92a11bc279ded95e490
+
+              width={1000}
+              height={1000}
+
             ></Image>
 
             <div className={css.item2}>
               <h4>WHY IS FOOD WASTED AT THE FARM?</h4>
-
               <p>
                 {" "}
                 It&apos;s time for us to comprehend that food comes in all
@@ -164,19 +162,21 @@ function About() {
           <div className={css.container}>
             <Image
               className={css.image1}
-              src={Vegimage2}
+              src={SalvegIcon}
               alt="Salveg"
               width={200}
               height={200}
             ></Image>
             <Image
               className={css.image2}
-              src={Vegimage2}
+              src= {Helpinghand}
               alt="Get involved image"
               width={200}
               height={200}
             ></Image>
-    <BiDonateHeart value={{ color: "blue", className: "global-class-name" }}/>
+         
+    <BiDonateHeart className={css.donateicon}/>
+        
           </div>
           <div className={css.container}>
             <button type="button Salveg-button" id={css.button1}>
