@@ -1,15 +1,12 @@
-.cardTitle {
-  padding: 1rem;
+.cardItem{
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
 }
-
-.cardDescription {
-  padding: 0 1rem;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.cardBody {
-  position: "relative";
+.cardItem {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in;
+  cursor: pointer;
 }

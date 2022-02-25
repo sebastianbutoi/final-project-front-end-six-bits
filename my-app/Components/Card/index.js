@@ -7,7 +7,7 @@ const Vegcard = ({ data }) => {
     <Row xs={1} s={1} md={2} lg={3} className="g-4">
       {Array.from({ length: data.length }).map((_, idx) => (
         <Col key={idx}>
-          <Card>
+          <Card className="cardItem">
             <Image
               variant="top"
               alt={data[idx]?.title}
