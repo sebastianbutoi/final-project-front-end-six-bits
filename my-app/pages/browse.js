@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Vegcard from "../Components/Card";
 import css from "../styles/browse.module.css";
+import SubmitModal from "../Components/SubmitModal";
 
 import OptionsBar from "../Components/OptionsBar";
 
