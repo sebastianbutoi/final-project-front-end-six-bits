@@ -15,6 +15,7 @@ function Home() {
       <div className={css.rightSide}>
         <div className={css.titleText}>
           <span>Shapeless </span>
+          <p>Hello</p>
           <br></br> <span className={css.altColour}> not</span> <br></br>
           <span>Tasteless</span>
         </div>
