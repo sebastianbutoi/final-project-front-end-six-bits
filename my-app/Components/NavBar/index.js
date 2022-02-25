@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <div className={css.navbar}>
       <div className={css.leftSide} id={openLinks ? "open" : "close"}>
-        <Image src={Logo} alt="logo" height="50" width="200" />
+        <Image src={Logo} alt="logo" height="50" width="200" priority="true" />
         <div className={css.hiddenLinks}>
           <a>Home</a>
           <a>Browse</a> <a>About</a> <a>Sign In</a>{" "}

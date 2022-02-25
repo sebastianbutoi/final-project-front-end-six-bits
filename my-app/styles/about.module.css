@@ -9,7 +9,6 @@
   margin: 30px 20px;
   padding: 10px;
 }
-
 .cardHorizontal {
   display: flex;
   flex: 1 1 auto;
@@ -112,12 +111,10 @@
 .sloganContainer {
   text-align: center;
 }
-.donateicon{
-  color: 	#9ACD32;
+.donateicon {
+  color: #9acd32;
   width: 100px;
   height: 100px;
   float: left;
   margin-left: 50px;
-
-
 }
