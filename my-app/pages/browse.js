@@ -19,7 +19,7 @@ function Browse() {
     fetchData();
   }, []);
   return (
-    <div>
+    <div className={css.wrapper}>
       <OptionsBar />
       <Vegcard data={data} />
     </div>
