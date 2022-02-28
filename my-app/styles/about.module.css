@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
 /* .about {
   font-family: "Chewy";
@@ -161,3 +162,57 @@
 .content:nth-child(2) {
   flex-direction: row-reverse;
 }
+
+.bottomContainer {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.donateicon {
+  color: #9acd32;
+  width: 200px;
+  height: 200px;
+}
+
+.sloganContainer {
+  text-align: center;
+}
+
+.slogan {
+  font-family: "Chewy", cursive;
+  font-size: 2vw;
+  color: #0c0c40;
+}
+
+.tasteless {
+  font-family: "Courgette", cursive;
+}
+
+.button {
+  background-color: #f76e11;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+/* .button {
+  width: 300px;
+  padding: 15px;
+  background-color: #f76e11;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  margin: 100px;
+  margin-right: 100px;
+  display: flex;
+  border: none;
+} */

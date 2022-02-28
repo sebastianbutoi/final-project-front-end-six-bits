@@ -71,6 +71,38 @@ function About() {
           </div>
         </div>
       </div>
+      <div className={css.sloganContainer}>
+        <p className={css.slogan}>
+          Might be shapeless but we guarantee it&apos;s NOT{" "}
+          <span className={css.tasteless}>tasteless</span>
+        </p>
+      </div>
+      <div className={css.bottomContainer}>
+        <div className={css.infoContainer}>
+          <Image
+            className={css.image1}
+            src={SalvegIcon}
+            alt="Salveg"
+            width={200}
+            height={200}
+          />
+          <button className={css.button}>SalVeg our fruit/veg</button>
+        </div>
+        <div className={css.infoContainer}>
+          <Image
+            className={css.image2}
+            src={Helpinghand}
+            alt="Get involved image"
+            width={200}
+            height={200}
+          />
+          <button className={css.button}>Get Involved</button>
+        </div>
+        <div className={css.infoContainer}>
+          <BiDonateHeart className={css.donateicon} />
+          <button className={css.button}>Make a Donation</button>
+        </div>
+      </div>
     </div>
   );
 }
