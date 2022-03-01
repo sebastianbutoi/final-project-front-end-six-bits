@@ -5,8 +5,7 @@ import Image from "next/image";
 import homeImage from "../public/images/vegbox.jpg";
 import homeImage1 from "../public/images/homeImage1Copy.png";
 import homeImage2 from "../public/images/homeImage2.png";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import css from "../styles/Home.module.css";
 function Home() {
@@ -22,8 +21,8 @@ function Home() {
           Get connected to local fresh food within your community<br></br> and
           help prevent food waste along the way!
         </p>
-        <Link href="/browse">
-          <a className={css.link}>Get Started</a>
+        <Link href="/browse" passHref>
+          <button className={css.link}>Get Started</button>
         </Link>
       </div>
       <div className={css.leftSide}>
