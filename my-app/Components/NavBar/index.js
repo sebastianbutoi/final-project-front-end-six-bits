@@ -4,8 +4,10 @@ import Logo from "../../public/images/logo.png";
 import ReorderIcon from "@material-ui/icons/Reorder";
 import css from "../../styles/navbar.module.css";
 import Image from "next/image";
+import { useUser } from "@auth0/nextjs-auth0";
 
 function Navbar() {
+  const { user } = useUser();
   const [openLinks, setOpenLinks] = useState(false);
   const toggleNavbar = () => {
     setOpenLinks(!openLinks);
@@ -29,12 +31,17 @@ function Navbar() {
         <Link href="/about">
           <a className={css.link}>About</a>
         </Link>
-        <Link href="/signin">
-          <a className={css.link}>Sign In</a>
-        </Link>
-        <Link href="/signup">
-          <a className={css.signUp}>Sign Up</a>
-        </Link>
+        {!user && (
+          <Link href="/api/auth/login">
+            <a className={css.link}>Sign In</a>
+          </Link>
+        )}
+        {user && (
+          <Link href="/api/auth/logout">
+            <a className={css.signUp}>Sign Up</a>
+          </Link>
+        )}
+
         {/* <button onClick={toggleNavbar}>
           <ReorderIcon className={css.menuIcon} />
         </button> */}
