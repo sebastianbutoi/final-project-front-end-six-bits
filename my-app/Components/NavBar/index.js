@@ -33,13 +33,18 @@ function Navbar() {
         </Link>
         {!user && (
           <Link href="/api/auth/login">
-            <a className={css.link}>Sign In</a>
+            <a className={css.signUp}>Sign In</a>
           </Link>
         )}
         {user && (
-          <Link href="/api/auth/logout">
-            <a className={css.signUp}>Sign Up</a>
-          </Link>
+          <>
+            <Link href="/profile">
+              <a className={css.link}>Profile</a>
+            </Link>
+            <Link href="/api/auth/logout">
+              <a className={css.signUp}>Sign Up</a>
+            </Link>
+          </>
         )}
 
         {/* <button onClick={toggleNavbar}>
