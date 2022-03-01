@@ -1,15 +1,9 @@
-.cardTitle {
-  padding: 1rem;
+.container {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  text-align: center;
 }
 
-.cardDescription {
-  padding: 0 1rem;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.cardBody {
-  position: "relative";
+#cardContainer {
+  background-color: red;
 }
