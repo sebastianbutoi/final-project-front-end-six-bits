@@ -39,9 +39,11 @@
   margin: 20px;
   font-size: 50px;
   cursor: pointer;
+  transition: all 1s;
 }
 .socialMedia svg:hover {
-  color: orange;
+  color: #ffaa00;
+  /* color: black; */
 }
 .footer p {
   color: white;
