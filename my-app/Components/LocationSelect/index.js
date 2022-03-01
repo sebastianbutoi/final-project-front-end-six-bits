@@ -25,6 +25,7 @@ export default function LocationSelect({ handleOnChange }) {
           <option value={"Birmingham"}>Birmingham</option>
           <option value={"Manchester"}>Manchester</option>
           <option value={"Edinburgh"}>Edinburgh</option>
+          <option value={"Liverpool"}>Liverpool</option>
         </NativeSelect>
       </FormControl>
     </Box>
