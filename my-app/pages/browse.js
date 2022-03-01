@@ -9,6 +9,7 @@ const URL = process.env.NEXT_PUBLIC_API_URL;
 
 function Browse() {
   const [data, setData] = useState([]);
+  const [area, setArea] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -18,10 +19,17 @@ function Browse() {
     }
     fetchData();
   }, []);
+
+  function handleOnChange(event) {
+    let newLocation = event.target.value;
+    setArea(newLocation);
+  }
+
   return (
     <div className={css.wrapper}>
-      <OptionsBar />
-      <Vegcard data={data} />
+      <OptionsBar handleOnChange={handleOnChange} />
+
+      <Vegcard data={data} area={area} />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 
-export default function LocationSelect() {
+export default function LocationSelect({ handleOnChange }) {
   return (
     <Box>
       <FormControl>
@@ -12,15 +12,20 @@ export default function LocationSelect() {
           Location
         </InputLabel>
         <NativeSelect
-          defaultValue={30}
+          onChange={handleOnChange}
+          defaultValue={"-"}
           inputProps={{
             name: "age",
             id: "uncontrolled-native",
           }}
         >
-          <option value={10}>Birmingham</option>
-          <option value={20}>London</option>
-          <option value={30}>Torquay</option>
+          <option value={""}></option>
+          <option value={"London"}>London</option>
+          <option value={"Torquay"}>Torquay</option>
+          <option value={"Birmingham"}>Birmingham</option>
+          <option value={"Manchester"}>Manchester</option>
+          <option value={"Edinburgh"}>Edinburgh</option>
+          <option value={"Liverpool"}>Liverpool</option>
         </NativeSelect>
       </FormControl>
     </Box>
