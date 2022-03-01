@@ -32,7 +32,7 @@ function Navbar() {
           <a className={css.link}>About</a>
         </Link>
         {!user && (
-          <Link href="/api/auth/login" passHref>
+          <Link href="/api/auth/login">
             <a className={css.signUp}>Sign In</a>
           </Link>
         )}
@@ -42,7 +42,7 @@ function Navbar() {
               <a className={css.link}>Profile</a>
             </Link>
             <Link href="/api/auth/logout">
-              <a className={css.signUp}>Log Out</a>
+              <a className={css.signUp}>Sign Up</a>
             </Link>
           </>
         )}
