@@ -25,7 +25,7 @@ const ProfileInput = () => {
     const newUser = {
       auth_id: user.sub,
       first_name: formData.firstName,
-      last_name: formData.last_name,
+      last_name: formData.secondName,
       phone_number: formData.phoneNumber,
       email: user.email,
       user_created: calculateDate(),
