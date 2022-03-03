@@ -28,8 +28,11 @@ function Browse() {
   return (
     <div className={css.wrapper}>
       <OptionsBar handleOnChange={handleOnChange} />
-
-      <Vegcard data={data} area={area} />
+      {data.length === 0 ? (
+        <h1>Loading...</h1>
+      ) : (
+        <Vegcard data={data} area={area} />
+      )}
     </div>
   );
 }
