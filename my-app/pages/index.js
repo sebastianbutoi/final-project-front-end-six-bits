@@ -6,11 +6,15 @@ import homeImage from "../public/images/vegbox.jpg";
 import homeImage1 from "../public/images/homeImage1Copy.png";
 import homeImage2 from "../public/images/homeImage2.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Head from "next/head";
 import css from "../styles/Home.module.css";
+
 function Home() {
   return (
     <div className={css.home}>
+      <Head>
+        <title>SalVeg</title>
+      </Head>
       <div className={css.rightSide}>
         <div className={css.titleText}>
           <span>Shapeless </span>
