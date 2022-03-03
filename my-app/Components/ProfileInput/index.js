@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useUser } from "@auth0/nextjs-auth0";
+
+const URL = process.env.NEXT_PUBLIC_API_URL;
 
 const ProfileInput = () => {
+  const { user } = useUser();
   const [formData, setFormData] = useState({
     firstName: "",
     secondName: "",
@@ -16,10 +20,38 @@ const ProfileInput = () => {
     }));
   };
 
+  useEffect(() => {}, [saved]);
+
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    const newUser = {
+      auth_id: user.sub,
+      first_name: formData.firstName,
+      last_name: formData.last_name,
+      phone_number: formData.phoneNumber,
+      email: user.email,
+      user_created: calculateDate(),
+    };
+    async function createUser() {
+      const response = await fetch(`${URL}/users`, {
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+        body: JSON.stringify(newUser),
+      });
+      const responseMessage = await response.json();
+      console.log(responseMessage);
+    }
+
+    createUser();
   };
+
+  function calculateDate() {
+    const today = new Date();
+    const dd = String(today.getDate());
+    const mm = String(today.getMonth() + 1);
+    const yyyy = today.getFullYear();
+    return dd + "/" + mm + "/" + yyyy;
+  }
 
   return (
     <div>

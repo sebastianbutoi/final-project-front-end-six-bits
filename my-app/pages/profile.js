@@ -11,7 +11,7 @@ export default function Profile() {
 
   useEffect(() => {
     async function getUserData() {
-      const resp = await fetch(`${URL}/users/${user.sub}`);
+      const resp = await fetch(`${URL}/users/${user?.sub}`);
       const data = await resp.json();
       if(data.payload.length > 0) {
         setUserData([...userData,...data.payload])
@@ -19,7 +19,7 @@ export default function Profile() {
     }
     getUserData();
   }, []);
-  console.log(user.sub);
+  
   return (
     <div>
       <h1>Profile</h1>
