@@ -1,22 +1,23 @@
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
-import css from "../styles/profile.module.css";
-import Vegcard from "../Components/Card";
-import { useState, useEffect } from "react";
-const URL = process.env.NEXT_PUBLIC_API_URL;
+import { useEffect, useState } from "react";
+import PostInput from "../Components/PostInput";
+import ProfileInput from "../Components/ProfileInput";
 
 export default function Profile() {
-  const [data, setData] = useState([]);
+  const [userData, setUserData] = useState([1]);
 
   useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(`${URL}/posts`);
-      const data = await res.json();
-      setData([...data.payload]);
+    async function getUserData() {
+      const resp = await fetch(`url`);
+      const data = resp.json();
     }
-    fetchData();
   }, []);
-
-  return <div></div>;
+  return (
+    <div>
+      <h1>Profile</h1>
+      {userData.length === 0 ? <ProfileInput /> : <PostInput />}
+    </div>
+  );
 }
 
 export const getServerSideProps = withPageAuthRequired();
