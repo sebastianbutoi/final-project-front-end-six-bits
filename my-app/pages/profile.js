@@ -1,17 +1,25 @@
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import { withPageAuthRequired, useUser } from "@auth0/nextjs-auth0";
 import { useEffect, useState } from "react";
 import PostInput from "../Components/PostInput";
 import ProfileInput from "../Components/ProfileInput";
 
+const URL = process.env.NEXT_PUBLIC_API_URL;
+
 export default function Profile() {
-  const [userData, setUserData] = useState([1]);
+  const { user } = useUser();
+  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
     async function getUserData() {
-      const resp = await fetch(`url`);
-      const data = resp.json();
+      const resp = await fetch(`${URL}/users/${user.sub}`);
+      const data = await resp.json();
+      if(data.payload.length > 0) {
+        setUserData([...userData,...data.payload])
+      }
     }
+    getUserData();
   }, []);
+  console.log(user.sub);
   return (
     <div>
       <h1>Profile</h1>
