@@ -20,8 +20,6 @@ const ProfileInput = () => {
     }));
   };
 
-  useEffect(() => {}, [saved]);
-
   const onSubmit = (e) => {
     e.preventDefault();
     const newUser = {

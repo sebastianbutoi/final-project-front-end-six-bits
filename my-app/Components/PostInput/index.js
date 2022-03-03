@@ -1,7 +1,9 @@
 import { useState } from "react";
 
+const URL = process.env.NEXT_PUBLIC_API_URL;
 const PostInput = () => {
   const [formData, setFormData] = useState({
+    user_id: 1,
     title: "",
     description: "",
     location: "",
@@ -21,8 +23,25 @@ const PostInput = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    async function postData() {
+      const response = await fetch(`${URL}/posts`, {
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      const responseMessage = await response.json();
+      console.log(responseMessage);
+    }
+    postData();
   };
+
+  function calculateDate() {
+    const today = new Date();
+    const dd = String(today.getDate());
+    const mm = String(today.getMonth() + 1);
+    const yyyy = today.getFullYear();
+    return dd + "/" + mm + "/" + yyyy;
+  }
 
   return (
     <div>
