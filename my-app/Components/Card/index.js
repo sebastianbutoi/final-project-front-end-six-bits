@@ -13,7 +13,11 @@ const Vegcard = ({ data, area }) => {
         <Row xs={1} s={1} md={2} lg={5} className="g-4">
           {Array.from({ length: data.length }).map((_, idx) => (
             <Col key={idx}>
-              <Card>
+              <Card
+                style={{
+                  boxShadow: "1px 1px grey",
+                }}
+              >
                 <Image
                   variant="top"
                   alt={data[idx]?.title}
@@ -83,7 +87,7 @@ const Vegcard = ({ data, area }) => {
     );
   }
 
-  if (length < 5) {
+  if (length > 0) {
     return (
       <div className={css.container}>
         <Row
@@ -95,42 +99,6 @@ const Vegcard = ({ data, area }) => {
           lg={5}
           className="g-4"
         >
-          {Array.from({ length: length }).map((_, idx) => (
-            <Col key={idx}>
-              <Card>
-                <Image
-                  variant="top"
-                  alt={found[idx]?.title}
-                  src={cucumber}
-                  height={266}
-                  width={160}
-                  priority="true"
-                />
-                <Card.Body
-                  style={{
-                    textAlign: "center",
-                    fontFamily: "Roboto",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <Card.Title>{found[idx]?.title}</Card.Title>
-                  <Card.Text>{found[idx]?.description}</Card.Text>
-                  <Card.Text>{found[idx]?.date}</Card.Text>
-                  <Card.Text>£{found[idx]?.price}</Card.Text>
-                  <Card.Text>{found[idx]?.location}</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </div>
-    );
-  }
-
-  if (length > 0) {
-    return (
-      <div className={css.container}>
-        <Row id="cardContainer" xs={1} s={1} md={2} lg={5} className="g-4">
           {Array.from({ length: length }).map((_, idx) => (
             <Col key={idx}>
               <Card>
