@@ -123,6 +123,7 @@
 } */
 
 .container {
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -145,7 +146,7 @@
 .content {
   display: flex;
   align-items: center;
-  background-color: rgb(189, 224, 255);
+  background-color: rgba(255, 221, 158, 0.1);
   border-bottom: 10px white solid;
 }
 
@@ -158,10 +159,11 @@
   font-weight: bold;
   font-family: "Chewy";
   font-size: 3vw;
-  color: #0c0c40;
+  color: #000000;
 }
 
 .content:nth-child(2) {
+  background-color: rgba(255, 184, 52, 0.2);
   flex-direction: row-reverse;
 }
 
@@ -190,7 +192,7 @@
 .slogan {
   font-family: "Chewy", cursive;
   font-size: 2vw;
-  color: #0c0c40;
+  color: #000000;
 }
 
 .tasteless {
@@ -198,10 +200,10 @@
 }
 
 .button {
-  background-color: #f76e11;
-  color: white;
+  background-color: #f7c151;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
   padding: 15px;
-  border-radius: 10px;
   cursor: pointer;
   border: none;
 }

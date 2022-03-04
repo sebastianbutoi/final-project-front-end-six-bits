@@ -49,11 +49,11 @@
 }
 
 .navlink:hover {
-  color: orange;
-  text-decoration: underline;
+  color: inherit;
+  border-bottom: #f7c151 4px solid;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 968px) {
   .navmenu {
     position: absolute;
     left: -100%;
