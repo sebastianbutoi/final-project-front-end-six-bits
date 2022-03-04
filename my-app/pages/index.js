@@ -30,12 +30,12 @@ function Home() {
         </Link>
       </div>
       <div className={css.leftSide}>
-        <Image
+        {/* <Image
           src={homeImage1}
           alt={"vegetables"}
           height={600}
           width={700}
-        ></Image>
+        ></Image> */}
       </div>
     </div>
   );
