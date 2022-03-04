@@ -7,6 +7,8 @@ import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg";
 import { BiDonateHeart } from "react-icons/bi";
 import Helpinghand from "/public/images/aboutPageImages/helpinghand.png";
 import SalvegIcon from "/public/images/aboutPageImages/salveg.png";
+import { GiFruitBowl } from "react-icons/gi";
+import { FaHandsHelping } from "react-icons/fa";
 
 function About() {
   return (
@@ -155,23 +157,11 @@ function About() {
       </div>
       <div className={css.bottomContainer}>
         <div className={css.infoContainer}>
-          <Image
-            className={css.image1}
-            src={SalvegIcon}
-            alt="Salveg"
-            width={200}
-            height={200}
-          />
+          <GiFruitBowl className={css.donateicon} />
           <button className={css.button}>SalVeg our fruit/veg</button>
         </div>
         <div className={css.infoContainer}>
-          <Image
-            className={css.image2}
-            src={Helpinghand}
-            alt="Get involved image"
-            width={200}
-            height={200}
-          />
+          <FaHandsHelping className={css.donateicon} />
           <button className={css.button}>Get Involved</button>
         </div>
         <div className={css.infoContainer}>

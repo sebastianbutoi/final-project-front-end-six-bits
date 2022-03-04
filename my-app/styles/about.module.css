@@ -145,7 +145,7 @@
 .content {
   display: flex;
   align-items: center;
-  background-color: rgb(255, 245, 218);
+  background-color: rgb(189, 224, 255);
   border-bottom: 10px white solid;
 }
 
@@ -162,7 +162,6 @@
 }
 
 .content:nth-child(2) {
-  background-color: rgb(255, 197, 38);
   flex-direction: row-reverse;
 }
 
@@ -180,7 +179,6 @@
 
 .donateicon {
   color: #9acd32;
-  /* color: #1f5300; */
   width: 200px;
   height: 200px;
 }
@@ -206,10 +204,6 @@
   border-radius: 10px;
   cursor: pointer;
   border: none;
-}
-
-.carouselCaption {
-  background-color: black;
 }
 
 /* .button {
