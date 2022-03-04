@@ -105,14 +105,7 @@ const PostInput = () => {
           </div>
           <br />
           <br />
-          <input
-            type="radio"
-            id="false"
-            name="free"
-            value="false"
-            onChange={onChange}
-          />
-           <label htmlFor="free">false</label>
+          <p>Is it free?</p>
           <input
             type="radio"
             id="true"
@@ -120,9 +113,18 @@ const PostInput = () => {
             value="true"
             onChange={onChange}
           />
-           <label htmlFor="free">true</label>
+           <label htmlFor="free">Yes</label>
+          <input
+            type="radio"
+            id="false"
+            name="free"
+            value="false"
+            onChange={onChange}
+          />
+           <label htmlFor="free">No</label>
           <br />
           <br />
+          <p>Price:</p>
           <input
             type="text"
             id="price"
@@ -133,7 +135,9 @@ const PostInput = () => {
           ></input>
           <br />
           <br />
-          <label htmlFor="start">Start date:</label>
+          <label htmlFor="start">
+            <span>Date:</span>
+          </label>
           <input
             type="date"
             id="date"
