@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 .header{
   border-bottom: 1px solid #E2E8F0;
 }
@@ -34,16 +35,18 @@
 }
 
 .navlink{
+  font-family: 'Chewy', cursive;
   font-size: 2rem;
   font-weight: 400;
-  color: #475569;
+  color: black;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
 }
 
 .navlink:hover{
-  color: #482ff7;
+  color: orange;
+  text-decoration: underline;
 }
 
 .navlogo {
@@ -54,7 +57,7 @@
 
 @media only screen and (max-width: 768px) {
   .navmenu {
-      position: fixed;
+      position: absolute;
       left: -100%;
       top: 5rem;
       flex-direction: column;
@@ -66,7 +69,7 @@
       box-shadow:
           0 10px 27px rgba(0, 0, 0, 0.05);
           opacity: 0.9;
-          z-index: 10;
+        z-index: 2;
   }
 
   .navmenu.active {

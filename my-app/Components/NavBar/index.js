@@ -12,7 +12,8 @@ function Navbar() {
     <header className={styles.header}>
         <nav className={styles.navbar}>
             <Link href='/'>
-            <a className={styles.navlogo}>[BrandLogo]</a>
+            <a className={styles.navlogo}><Image src={Logo} alt="logo" height="50" width="200" priority="true" />
+            </a>
             </Link>
           <ul className={isOpen === false ? styles.navmenu:styles.navmenu +' '+styles.active}>
             <li className={styles.navitem}>
