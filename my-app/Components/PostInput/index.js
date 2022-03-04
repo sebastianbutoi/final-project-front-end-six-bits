@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+import { useUser } from "@auth0/nextjs-auth0";
 import css from "../../styles/signedInProfile.module.css";
 
 const URL = process.env.NEXT_PUBLIC_API_URL;
-const PostInput = ({ user }) => {
+
+const PostInput = () => {
+  const { user } = useUser();
+  console.log(user);
   const [formData, setFormData] = useState({
     user_id: 1,
     title: "",
@@ -16,10 +20,10 @@ const PostInput = ({ user }) => {
 
   useEffect(() => {
     async function getUserData() {
-      const resp = await fetch(`${URL}/posts/${user?.sub}`);
+      const resp = await fetch(`${URL}/posts/${user.sub}`);
       const data = await resp.json();
       if (data.payload.length > 0) {
-        setPosts([...userData, ...data.payload]);
+        setPosts([...posts, ...data.payload]);
       }
       console.log(data);
     }
@@ -47,21 +51,20 @@ const PostInput = ({ user }) => {
       console.log(responseMessage);
     }
     postData();
+    setPosts([...posts, formData]);
   };
-
-  // function calculateDate() {
-  //   const today = new Date();
-  //   const dd = String(today.getDate());
-  //   const mm = String(today.getMonth() + 1);
-  //   const yyyy = today.getFullYear();
-  //   return dd + "/" + mm + "/" + yyyy;
-  // }
-
   return (
     <div className={css.container}>
       <div className={css.postInput}>
-        <p className={css.inputTitle}>Name:</p>
-        <p className={css.inputTitle}>Email:</p>
+        <p className={css.inputTitle}>
+          Name:{" "}
+          {posts.length > 0
+            ? posts[0].first_name + " " + posts[0].last_name
+            : ""}
+        </p>
+        <p className={css.inputTitle}>
+          Email: {posts.length > 0 ? posts[0].email : ""}
+        </p>
         <form onSubmit={onSubmit}>
           <div className={css.inputContainer}>
             <input
@@ -145,7 +148,13 @@ const PostInput = ({ user }) => {
           <button type="submit">Post data</button>
         </form>
       </div>
-      <div className={css.postDisplay}> Posts will go here</div>
+      <div className={css.postDisplay}>
+        {" "}
+        Posts will go here
+        {posts.map((item) => {
+          return <p>{item.title}</p>;
+        })}
+      </div>
     </div>
   );
 };
