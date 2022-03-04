@@ -3,10 +3,13 @@ import { Carousel } from "react-bootstrap";
 import Image from "next/image";
 import Head from "next/head";
 import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg";
-import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg";
+import carouselImage1 from "/public/images/aboutPageImages/carouselImage1.jpg";
+import carouselImage2 from "/public/images/aboutPageImages/carouselImage2.jpg";
 import { BiDonateHeart } from "react-icons/bi";
 import Helpinghand from "/public/images/aboutPageImages/helpinghand.png";
 import SalvegIcon from "/public/images/aboutPageImages/salveg.png";
+import { GiFruitBowl } from "react-icons/gi";
+import { FaHandsHelping } from "react-icons/fa";
 
 function About() {
   return (
@@ -14,6 +17,82 @@ function About() {
       <Head>
         <title>SalVeg | About</title>
       </Head>
+      <Carousel
+        style={{
+          position: "relative",
+          width: "50%",
+          margin: "0 auto",
+        }}
+      >
+        <Carousel.Item
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "500px",
+            justifySelf: "center",
+          }}
+        >
+          <Image
+            className="d-block w-100"
+            src={Farmwaste}
+            alt="First slide"
+            layout="fill"
+            objectFit="fill"
+          />
+          <Carousel.Caption>
+            <h3 className={css.carouselCaption}>
+              Supermarkets look for fruit and vegetables that fit a &apos;beauty
+              standard &apos; - they must be of a certain size, shape or colour
+              to be sold
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "500px",
+            paddingBottom: "20%",
+          }}
+        >
+          <Image
+            className="d-block w-100"
+            src={carouselImage1}
+            alt="Second slide"
+            layout="fill"
+            objectFit="fill"
+          />
+          <Carousel.Caption>
+            <h3 className={css.carouselCaption}>
+              If food waste were a country, it would be the third-largest
+              greenhouse gas emitter, after China and the US - Stop Wasting Food
+              Movement, 2020
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "500px",
+            paddingBottom: "20%",
+          }}
+        >
+          <Image
+            className="d-block w-100"
+            src={carouselImage2}
+            alt="Third slide"
+            layout="fill"
+            objectFit="fill"
+          />
+          <Carousel.Caption>
+            <h3 className={css.carouselCaption}>
+              In UK households, 2 million tonnes of the food that goes to waste
+              is untouched or opened/started but not finished - Wrap, 2017
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
       <h1 className={css.title}>
         It is estimated that 3.6 million tonnes of food is wasted before it
         leaves UK farms
@@ -23,7 +102,7 @@ function About() {
           <Image
             className={css.contentImage}
             id={css.image}
-            src={Vegimage2}
+            src={Farmwaste}
             alt="Card image cap"
             width={400}
             height={300}
@@ -49,7 +128,7 @@ function About() {
           <Image
             className={css.contentImage}
             id={css.image}
-            src={Vegimage2}
+            src={Farmwaste}
             alt="Card image cap"
             width={400}
             height={300}
@@ -79,23 +158,12 @@ function About() {
       </div>
       <div className={css.bottomContainer}>
         <div className={css.infoContainer}>
-          <Image
-            className={css.image1}
-            src={SalvegIcon}
-            alt="Salveg"
-            width={150}
-            height={150}
-          />
+
+          <GiFruitBowl className={css.donateicon} />
           <button className={css.button}>SalVeg our fruit/veg</button>
         </div>
         <div className={css.infoContainer}>
-          <Image
-            className={css.image2}
-            src={Helpinghand}
-            alt="Get involved image"
-            width={150}
-            height={150}
-          />
+          <FaHandsHelping className={css.donateicon} />
           <button className={css.button}>Get Involved</button>
         </div>
         <div className={css.infoContainer}>

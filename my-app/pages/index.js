@@ -5,6 +5,7 @@ import Image from "next/image";
 import homeImage from "../public/images/vegbox.jpg";
 import homeImage1 from "../public/images/homeImage1Copy.png";
 import homeImage2 from "../public/images/homeImage2.png";
+import homeImage3 from "../public/images/homeImage3.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
 import css from "../styles/Home.module.css";

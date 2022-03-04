@@ -26,7 +26,7 @@ export default function Profile() {
       <Head>
         <title>SalVeg | Profile</title>
       </Head>
-      <h1>Profile</h1>
+
       {userData.length === 0 ? <ProfileInput /> : <PostInput />}
     </div>
   );
