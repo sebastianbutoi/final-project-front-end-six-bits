@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -34,4 +37,34 @@ button:focus {
 button:focus {
   outline: none;
 
+}
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pageContainer {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.contentWrap {
+  padding-bottom: 200px;
+}
+
+::selection {
+  background-color: #f7c151;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+input[type="text"]:focus {
+  border: none;
+  outline: none;
 }
