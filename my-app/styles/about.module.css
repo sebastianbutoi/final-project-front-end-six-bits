@@ -133,6 +133,8 @@
   font-family: "Chewy";
   font-size: 3vw;
   color: #0c0c40;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .contentContainer {
@@ -143,7 +145,7 @@
 .content {
   display: flex;
   align-items: center;
-  background-color: rgb(189, 224, 255);
+  background-color: rgb(255, 245, 218);
   border-bottom: 10px white solid;
 }
 
@@ -160,6 +162,7 @@
 }
 
 .content:nth-child(2) {
+  background-color: rgb(255, 197, 38);
   flex-direction: row-reverse;
 }
 
@@ -177,6 +180,7 @@
 
 .donateicon {
   color: #9acd32;
+  /* color: #1f5300; */
   width: 200px;
   height: 200px;
 }
@@ -202,6 +206,10 @@
   border-radius: 10px;
   cursor: pointer;
   border: none;
+}
+
+.carouselCaption {
+  background-color: black;
 }
 
 /* .button {

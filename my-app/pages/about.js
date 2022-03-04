@@ -14,6 +14,82 @@ function About() {
       <Head>
         <title>SalVeg | About</title>
       </Head>
+      <Carousel
+        style={{
+          position: "relative",
+          width: "50%",
+          margin: "0 auto",
+        }}
+      >
+        <Carousel.Item
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "500px",
+            justifySelf: "center",
+          }}
+        >
+          <Image
+            className="d-block w-100"
+            src={Farmwaste}
+            alt="First slide"
+            layout="fill"
+            objectFit="fill"
+          />
+          <Carousel.Caption>
+            <h3 className={css.carouselCaption}>
+              Supermarkets look for fruit and vegetables that fit a &apos;beauty
+              standard &apos; - they must be of a certain size, shape or colour
+              to be sold
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "500px",
+            paddingBottom: "20%",
+          }}
+        >
+          <Image
+            className="d-block w-100"
+            src={Vegimage2}
+            alt="Second slide"
+            layout="fill"
+            objectFit="fill"
+          />
+          <Carousel.Caption>
+            <h3 className={css.carouselCaption}>
+              If food waste were a country, it would be the third-largest
+              greenhouse gas emitter, after China and the US - Stop Wasting Food
+              Movement, 2020
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "500px",
+            paddingBottom: "20%",
+          }}
+        >
+          <Image
+            className="d-block w-100"
+            src={Vegimage2}
+            alt="Third slide"
+            layout="fill"
+            objectFit="fill"
+          />
+          <Carousel.Caption>
+            <h3 className={css.carouselCaption}>
+              In UK households, 2 million tonnes of the food that goes to waste
+              is untouched or opened/started but not finished - Wrap, 2017
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
       <h1 className={css.title}>
         It is estimated that 3.6 million tonnes of food is wasted before it
         leaves UK farms

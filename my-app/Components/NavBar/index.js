@@ -42,7 +42,7 @@ function Navbar() {
               <a className={css.link}>Profile</a>
             </Link>
             <Link href="/api/auth/logout">
-              <a className={css.signUp}>Sign Up</a>
+              <a className={css.signUp}>Log Out</a>
             </Link>
           </>
         )}

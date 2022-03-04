@@ -41,3 +41,14 @@ a {
 ::selection {
   background-color: #f7c151;
 }
+
+input[type="text"] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+input[type="text"]:focus {
+  border: none;
+  outline: none;
+}
