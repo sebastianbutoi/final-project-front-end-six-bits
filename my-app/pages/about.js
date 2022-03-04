@@ -158,6 +158,7 @@ function About() {
       </div>
       <div className={css.bottomContainer}>
         <div className={css.infoContainer}>
+
           <GiFruitBowl className={css.donateicon} />
           <button className={css.button}>SalVeg our fruit/veg</button>
         </div>
