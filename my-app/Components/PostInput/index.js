@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import css from "../../styles/signedInProfile.module.css";
 
 const URL = process.env.NEXT_PUBLIC_API_URL;
@@ -12,6 +12,19 @@ const PostInput = ({ user }) => {
     price: 0,
     date: "",
   });
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    async function getUserData() {
+      const resp = await fetch(`${URL}/posts/${user?.sub}`);
+      const data = await resp.json();
+      if (data.payload.length > 0) {
+        setPosts([...userData, ...data.payload]);
+      }
+      console.log(data);
+    }
+    getUserData();
+  }, []);
 
   const { title, description, location, price, date } = formData;
 
@@ -47,11 +60,8 @@ const PostInput = ({ user }) => {
   return (
     <div className={css.container}>
       <div className={css.postInput}>
-        <p className={css.inputTitle}>
-          Name: {user[0].first_name} {""}
-          {user[0].last_name}
-        </p>
-        <p className={css.inputTitle}>Email: {user[0].email}</p>
+        <p className={css.inputTitle}>Name:</p>
+        <p className={css.inputTitle}>Email:</p>
         <form onSubmit={onSubmit}>
           <div className={css.inputContainer}>
             <input

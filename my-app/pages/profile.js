@@ -27,7 +27,7 @@ export default function Profile() {
         <title>SalVeg | Profile</title>
       </Head>
 
-      {userData.length === 0 ? <ProfileInput /> : <PostInput user={userData} />}
+      {userData.length === 0 ? <ProfileInput /> : <PostInput />}
     </div>
   );
 }

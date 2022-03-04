@@ -52,3 +52,7 @@ input[type="text"]:focus {
   border: none;
   outline: none;
 }
+
+.navbar {
+  z-index: 2;
+}

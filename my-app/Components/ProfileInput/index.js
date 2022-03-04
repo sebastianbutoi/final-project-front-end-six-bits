@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { useUser } from "@auth0/nextjs-auth0";
+import css from "../../styles/profile.module.css";
+import Image from "next/image";
+import carrots from "../../public/images/carrots.jpg";
 
 const URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -52,41 +55,57 @@ const ProfileInput = () => {
   }
 
   return (
-    <div>
-      <p>We need more information about you before creating a new post.</p>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          value={firstName}
-          placeholder="Enter first name"
-          onChange={onChange}
-        ></input>{" "}
-        <br />
-        <br />
-        <input
-          type="text"
-          id="secondName"
-          name="secondName"
-          value={secondName}
-          placeholder="Enter second name"
-          onChange={onChange}
-        ></input>
-        <br />
-        <br />
-        <input
-          type="text"
-          id="phoneNumber"
-          name="phoneNumber"
-          value={phoneNumber}
-          placeholder="Enter phone number"
-          onChange={onChange}
-        ></input>
-        <br />
-        <br />
-        <button type="submit">Update Profile</button>
-      </form>
+    <div className={css.container}>
+      <div className={css.infoSubmit}>
+        <h2 className={css.submitTitle}>
+          We need more information about you<br></br> before creating a new
+          post.
+        </h2>
+        <form onSubmit={onSubmit}>
+          <div className={css.inputContainer}>
+            <input
+              className={css.input}
+              type="text"
+              id="firstName"
+              name="firstName"
+              value={firstName}
+              placeholder="Enter first name"
+              onChange={onChange}
+            ></input>
+          </div>
+          <br />
+          <br />
+          <div className={css.inputContainer}>
+            <input
+              className={css.input}
+              type="text"
+              id="secondName"
+              name="secondName"
+              value={secondName}
+              placeholder="Enter second name"
+              onChange={onChange}
+            ></input>
+          </div>
+          <br />
+          <br />
+          <div className={css.inputContainer}>
+            <input
+              className={css.input}
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              value={phoneNumber}
+              placeholder="Enter phone number"
+              onChange={onChange}
+            ></input>
+          </div>
+          <br />
+          <br />
+          <div className={css.btnContainer}>
+            <button type="submit">Update Profile</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
