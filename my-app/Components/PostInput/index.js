@@ -25,7 +25,6 @@ const PostInput = () => {
       if (data.payload.length > 0) {
         setPosts([...posts, ...data.payload]);
       }
-      console.log(data);
     }
     getUserData();
   }, []);

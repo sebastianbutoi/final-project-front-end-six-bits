@@ -206,6 +206,10 @@
   border: none;
 }
 
+.carouselCaption {
+  background-color: black;
+}
+
 /* .button {
   width: 300px;
   padding: 15px;
