@@ -3,7 +3,8 @@ import { Carousel } from "react-bootstrap";
 import Image from "next/image";
 import Head from "next/head";
 import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg";
-import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg";
+import carouselImage1 from "/public/images/aboutPageImages/carouselImage1.jpg";
+import carouselImage2 from "/public/images/aboutPageImages/carouselImage2.jpg";
 import { BiDonateHeart } from "react-icons/bi";
 import Helpinghand from "/public/images/aboutPageImages/helpinghand.png";
 import SalvegIcon from "/public/images/aboutPageImages/salveg.png";
@@ -56,7 +57,7 @@ function About() {
         >
           <Image
             className="d-block w-100"
-            src={Vegimage2}
+            src={carouselImage1}
             alt="Second slide"
             layout="fill"
             objectFit="fill"
@@ -79,7 +80,7 @@ function About() {
         >
           <Image
             className="d-block w-100"
-            src={Vegimage2}
+            src={carouselImage2}
             alt="Third slide"
             layout="fill"
             objectFit="fill"
@@ -101,7 +102,7 @@ function About() {
           <Image
             className={css.contentImage}
             id={css.image}
-            src={Vegimage2}
+            src={Farmwaste}
             alt="Card image cap"
             width={400}
             height={300}
@@ -127,7 +128,7 @@ function About() {
           <Image
             className={css.contentImage}
             id={css.image}
-            src={Vegimage2}
+            src={Farmwaste}
             alt="Card image cap"
             width={400}
             height={300}
