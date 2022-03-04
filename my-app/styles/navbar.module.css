@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-.header{
-  border-bottom: 1px solid #E2E8F0;
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+.header {
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .navbar {
@@ -12,6 +12,10 @@
 
 .hamburger {
   display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .bar {
@@ -34,8 +38,8 @@
   margin-left: 5rem;
 }
 
-.navlink{
-  font-family: 'Chewy', cursive;
+.navlink {
+  font-family: "Chewy", cursive;
   font-size: 2rem;
   font-weight: 400;
   color: black;
@@ -44,54 +48,51 @@
   cursor: pointer;
 }
 
-.navlink:hover{
+.navlink:hover {
   color: orange;
   text-decoration: underline;
 }
 
-
-
 @media only screen and (max-width: 768px) {
   .navmenu {
-      position: absolute;
-      left: -100%;
-      top: 5rem;
-      flex-direction: column;
-      background-color: white;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);
-          opacity: 0.9;
-        z-index: 2;
+    position: absolute;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    opacity: 0.9;
+    z-index: 2;
   }
 
   .navmenu.active {
-      left: 0;
+    left: 0;
   }
 
   .navitem {
-      margin: 2.5rem 0;
+    margin: 2.5rem 0;
   }
 
   .hamburger {
-      display: block;
-      cursor: pointer;
+    display: block;
+    cursor: pointer;
   }
 
   .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
+    opacity: 0;
   }
 
   .hamburger.active .bar:nth-child(1) {
-      -webkit-transform: translateY(8px) rotate(45deg);
-      transform: translateY(8px) rotate(45deg);
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(3) {
-      -webkit-transform: translateY(-8px) rotate(-45deg);
-      transform: translateY(-8px) rotate(-45deg);
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
 }

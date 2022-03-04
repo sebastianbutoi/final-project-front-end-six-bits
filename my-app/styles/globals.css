@@ -8,13 +8,6 @@
   box-sizing: border-box;
 }
 
-html,body, body * { 
-  font-family: 'Roboto', sans-serif;
-  color:inherit;
-  background-color:inherit;
- font-size: 100%;
-}
-
 li {
   list-style: none;
 }
@@ -22,21 +15,20 @@ li {
 a {
   text-decoration: none;
 }
-button {
-background: transparent;
-border: none;
-cursor: pointer;
-padding: 0;
-}
+/* button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+} */
 
-button:hover,
+/* button:hover,
 button:focus {
-  background:transparent;
-}
+  background: transparent;
+} */
 
 button:focus {
   outline: none;
-
 }
 #__next {
   display: flex;

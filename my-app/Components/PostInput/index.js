@@ -8,7 +8,7 @@ const PostInput = () => {
   const { user } = useUser();
   console.log(user);
   const [formData, setFormData] = useState({
-    user_id: 1,
+    auth_id: user.sub,
     title: "",
     description: "",
     location: "",

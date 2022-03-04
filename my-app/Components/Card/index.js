@@ -10,7 +10,7 @@ const Vegcard = ({ data, area }) => {
   if (length === 0 && area === "") {
     return (
       <div className={css.container}>
-        <Row xs={1} s={1} md={2} lg={5} className="g-4">
+        <Row xs={2} s={2} md={2} lg={5} className="g-4">
           {Array.from({ length: data.length }).map((_, idx) => (
             <Col key={idx}>
               <Card
@@ -54,7 +54,7 @@ const Vegcard = ({ data, area }) => {
           We couldn&apos;t find any posts for that location so here is all data
           instead
         </h2>
-        <Row id="cardContainer" xs={1} s={1} md={2} lg={5} className="g-4">
+        <Row id="cardContainer" xs={2} s={2} md={2} lg={5} className="g-4">
           {Array.from({ length: data.length }).map((_, idx) => (
             <Col key={idx}>
               <Card>
@@ -93,8 +93,8 @@ const Vegcard = ({ data, area }) => {
         <Row
           style={{ display: "flex", justifyContent: "center" }}
           id="cardContainer"
-          xs={1}
-          s={1}
+          xs={2}
+          s={2}
           md={2}
           lg={5}
           className="g-4"
