@@ -83,8 +83,8 @@ function About() {
             className={css.image1}
             src={SalvegIcon}
             alt="Salveg"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
           />
           <button className={css.button}>SalVeg our fruit/veg</button>
         </div>
@@ -93,8 +93,8 @@ function About() {
             className={css.image2}
             src={Helpinghand}
             alt="Get involved image"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
           />
           <button className={css.button}>Get Involved</button>
         </div>
