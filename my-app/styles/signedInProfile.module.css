@@ -18,3 +18,7 @@
 .inputContainer {
   border-bottom: 4px solid #f7c151;
 }
+
+.postDisplay {
+  max-width: 800px;
+}

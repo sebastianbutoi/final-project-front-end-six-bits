@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useUser } from "@auth0/nextjs-auth0";
+import UserPost from "../UserPosts";
 import css from "../../styles/signedInProfile.module.css";
 
 const URL = process.env.NEXT_PUBLIC_API_URL;
@@ -152,11 +153,7 @@ const PostInput = () => {
         </form>
       </div>
       <div className={css.postDisplay}>
-        {" "}
-        Posts will go here
-        {posts.map((item) => {
-          return <p>{item.title}</p>;
-        })}
+        <UserPost data={posts} />
       </div>
     </div>
   );
