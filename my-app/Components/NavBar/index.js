@@ -6,11 +6,13 @@ import Image from "next/image";
 import { useUser } from "@auth0/nextjs-auth0";
 
 function Navbar() {
+  const [isOpen,setIsOpen] = useState(false);
+  const openMenu = ()=> setIsOpen(!isOpen)
   return (
     <header className={styles.header}>
         <nav className={styles.navbar}>
             <a className={styles.navlogo}>[BrandLogo]</a>
-          <ul className={styles.navmenu}>
+          <ul className={isOpen === false ? styles.navmenu:styles.navmenu +' '+styles.active}>
             <li className={styles.navitem}>
                 <a className={styles.navlink}>Home</a>
             </li>
@@ -35,7 +37,9 @@ function Navbar() {
       
             </li>
           </ul>
-          <button className={styles.hamburger}>
+          <button className={isOpen ===false ? styles.hamburger : styles.hamburger+' '+styles.active}
+          onClick={openMenu}
+          >
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
