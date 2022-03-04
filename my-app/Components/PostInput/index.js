@@ -153,6 +153,7 @@ const PostInput = () => {
         </form>
       </div>
       <div className={css.postDisplay}>
+        <h1>Your posts</h1>
         <UserPost data={posts} />
       </div>
     </div>
