@@ -1,4 +1,5 @@
 import { Card, Col, Row } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 import cucumber from "../../public/images/cucumber.jpg";
 import Image from "next/image";
 import css from "../../styles/userpost.module.css";

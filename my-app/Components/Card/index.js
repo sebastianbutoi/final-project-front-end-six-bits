@@ -1,4 +1,6 @@
 import { Card, Col, Row } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
+import { MdLocationOn } from "react-icons/md";
 import cucumber from "../../public/images/cucumber.jpg";
 import Image from "next/image";
 import css from "../../styles/card.module.css";
@@ -37,7 +39,10 @@ const Vegcard = ({ data, area }) => {
                   <Card.Text>{data[idx]?.description}</Card.Text>
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
-                  <Card.Text>{data[idx]?.location}</Card.Text>
+                  <Card.Text>
+                    <MdLocationOn />
+                    {data[idx]?.location}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -77,7 +82,21 @@ const Vegcard = ({ data, area }) => {
                   <Card.Text>{data[idx]?.description}</Card.Text>
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
-                  <Card.Text>{data[idx]?.location}</Card.Text>
+                  <Card.Text>
+                    <MdLocationOn />
+                    {data[idx]?.location}
+                  </Card.Text>
+                  <Accordion>
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>Contact</Accordion.Header>
+                      <Accordion.Body>
+                        <div className={css.details}>
+                          <p>NAME: test</p> <p>EMAIL: test@test.com</p>{" "}
+                          <p>PHONE: 1111111111</p>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>{" "}
+                  </Accordion>
                 </Card.Body>
               </Card>
             </Col>
@@ -102,6 +121,7 @@ const Vegcard = ({ data, area }) => {
           {Array.from({ length: length }).map((_, idx) => (
             <Col key={idx}>
               <Card>
+                <Card.Title>{found[idx]?.title}</Card.Title>
                 <Image
                   variant="top"
                   alt={found[idx]?.title}
@@ -117,11 +137,21 @@ const Vegcard = ({ data, area }) => {
                     fontWeight: "bold",
                   }}
                 >
-                  <Card.Title>{found[idx]?.title}</Card.Title>
                   <Card.Text>{found[idx]?.description}</Card.Text>
                   <Card.Text>{found[idx]?.date}</Card.Text>
                   <Card.Text>£{found[idx]?.price}</Card.Text>
-                  <Card.Text>{found[idx]?.location}</Card.Text>
+                  <Card.Text>
+                    <MdLocationOn />
+                    {data[idx]?.location}
+                  </Card.Text>
+                  <Accordion>
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>Contact</Accordion.Header>
+                      <Accordion.Body>
+                        THE CONTACT DETAILS WILL BE HERE
+                      </Accordion.Body>
+                    </Accordion.Item>{" "}
+                  </Accordion>
                 </Card.Body>
               </Card>
             </Col>
