@@ -157,15 +157,7 @@ const PostInput = () => {
         </form>
       </div>
       <div className={css.postDisplay}>
-        {posts[0]?.title === null ? (
-          <h1>You don&apos;t have any posts currently</h1>
-        ) : (
-          <>
-            {" "}
-            <h1>Your posts</h1>
-            <UserPost data={posts} />{" "}
-          </>
-        )}
+        <UserPost data={posts} />{" "}
       </div>
     </div>
   );

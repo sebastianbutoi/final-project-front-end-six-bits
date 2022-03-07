@@ -49,8 +49,9 @@ const Vegcard = ({ data, area }) => {
                       <Accordion.Header>Contact</Accordion.Header>
                       <Accordion.Body>
                         <div className={css.details}>
-                          <p>NAME: test</p> <p>EMAIL: test@test.com</p>{" "}
-                          <p>PHONE: 1111111111</p>
+                          <p>NAME: {data[idx]?.first_name}</p>{" "}
+                          <p>EMAIL: {data[idx]?.email}</p>{" "}
+                          <p>PHONE: {data[idx]?.phone_number}</p>
                         </div>
                       </Accordion.Body>
                     </Accordion.Item>{" "}
@@ -75,6 +76,7 @@ const Vegcard = ({ data, area }) => {
           {Array.from({ length: data.length }).map((_, idx) => (
             <Col key={idx}>
               <Card>
+                <Card.Title>{data[idx]?.title}</Card.Title>
                 <Image
                   variant="top"
                   alt={data[idx]?.title}
@@ -90,7 +92,6 @@ const Vegcard = ({ data, area }) => {
                     fontWeight: "bold",
                   }}
                 >
-                  <Card.Title>{data[idx]?.title}</Card.Title>
                   <Card.Text>{data[idx]?.description}</Card.Text>
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
@@ -103,8 +104,9 @@ const Vegcard = ({ data, area }) => {
                       <Accordion.Header>Contact</Accordion.Header>
                       <Accordion.Body>
                         <div className={css.details}>
-                          <p>NAME: test</p> <p>EMAIL: test@test.com</p>{" "}
-                          <p>PHONE: 1111111111</p>
+                          <p>{data[idx]?.first_name}</p>{" "}
+                          <p>{data[idx]?.email}</p>{" "}
+                          <p>{data[idx]?.phone_number}</p>
                         </div>
                       </Accordion.Body>
                     </Accordion.Item>{" "}
@@ -160,7 +162,11 @@ const Vegcard = ({ data, area }) => {
                     <Accordion.Item eventKey="0">
                       <Accordion.Header>Contact</Accordion.Header>
                       <Accordion.Body>
-                        THE CONTACT DETAILS WILL BE HERE
+                        <div className={css.details}>
+                          <p>{found[idx]?.first_name}</p>{" "}
+                          <p>{found[idx]?.email}</p>{" "}
+                          <p>{found[idx]?.phone_number}</p>
+                        </div>
                       </Accordion.Body>
                     </Accordion.Item>{" "}
                   </Accordion>
