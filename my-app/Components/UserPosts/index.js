@@ -8,7 +8,7 @@ function UserPost({ data }) {
     return (
       <div className={css.container}>
         <div className={css.postDisplay}>
-          <Row xs={2} s={2} md={2} lg={3} className="g-4">
+          <Row xs={1} s={1} md={2} lg={3} className="g-4">
             {Array.from({ length: data.length }).map((_, idx) => (
               <Col key={idx}>
                 <Card
