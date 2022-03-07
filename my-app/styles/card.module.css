@@ -3,7 +3,12 @@
   padding-right: 2vw;
   text-align: center;
 }
+.cardTop {
+  display: flex;
+  justify-content: space-around;
+}
 
-#cardContainer {
-  background-color: red;
+.details {
+  display: flex;
+  flex-direction: column;
 }

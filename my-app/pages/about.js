@@ -20,7 +20,7 @@ function About() {
       <Carousel
         style={{
           position: "relative",
-          width: "50%",
+          width: "50vw",
           margin: "0 auto",
         }}
       >
