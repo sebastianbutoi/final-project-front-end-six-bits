@@ -54,18 +54,9 @@ const PostInput = () => {
       const responseMessage = await response.json();
       console.log(responseMessage);
     }
-    if (
-      formData.title &&
-      formData.description &&
-      formData.location &&
-      formData.date &&
-      formData.free
-    ) {
       postData();
       setUpdate(!update);
-    } else {
-      alert("Please insert all the required fields.");
-    }
+    
   };
   return (
     <div className={css.container}>
@@ -88,6 +79,7 @@ const PostInput = () => {
               value={title}
               placeholder="Title *"
               autoComplete="off"
+              required
               onChange={onChange}
             ></input>
           </div>{" "}
@@ -101,6 +93,7 @@ const PostInput = () => {
               value={description}
               placeholder="Description *"
               autoComplete="off"
+              required
               onChange={onChange}
             ></input>
           </div>
@@ -114,6 +107,7 @@ const PostInput = () => {
               value={location}
               placeholder="Location *"
               autoComplete="off"
+              required
               onChange={onChange}
             ></input>
           </div>
@@ -125,6 +119,7 @@ const PostInput = () => {
             id="true"
             name="free"
             value="true"
+            required
             onChange={onChange}
           />
            <label htmlFor="free">Yes</label>
@@ -133,6 +128,7 @@ const PostInput = () => {
             id="false"
             name="free"
             value="false"
+            required
             onChange={onChange}
           />
            <label htmlFor="free">No</label>
@@ -159,6 +155,7 @@ const PostInput = () => {
             value={date}
             min="2018-01-01"
             max="2022-12-31"
+            required
             onChange={onChange}
           />
           {"*"}
