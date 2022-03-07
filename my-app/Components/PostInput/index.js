@@ -12,8 +12,8 @@ const PostInput = () => {
     auth_id: user.sub,
     title: "",
     description: "",
+    quantity: "",
     location: "",
-    free: null,
     price: 0,
     date: "",
   });
@@ -34,7 +34,8 @@ const PostInput = () => {
     setPosts([...data]);
   }, [update]);
 
-  const { title, description, location, price, date } = formData;
+  const { title, description, quantity, location, price, date } =
+    formData;
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -54,10 +55,10 @@ const PostInput = () => {
       const responseMessage = await response.json();
       console.log(responseMessage);
     }
-      postData();
-      setUpdate(!update);
-    
+    postData();
+    setUpdate(!update);
   };
+  
   return (
     <div className={css.container}>
       <div className={css.postInput}>
@@ -99,6 +100,20 @@ const PostInput = () => {
           </div>
           <br />
           <br />
+          <p>Quantity (e.g. 4, 100g, 1kg)</p>
+          <div className={css.inputContainer}>
+            <input
+              type="text"
+              id="quantity"
+              name="quantity"
+              value={quantity}
+              placeholder="Enter the quantity *"
+              required
+              onChange={onChange}
+            ></input>
+          </div>
+          <br />
+          <br />
           <div className={css.inputContainer}>
             <input
               type="text"
@@ -111,27 +126,6 @@ const PostInput = () => {
               onChange={onChange}
             ></input>
           </div>
-          <br />
-          <br />
-          <p>Is it free? *</p>
-          <input
-            type="radio"
-            id="true"
-            name="free"
-            value="true"
-            required
-            onChange={onChange}
-          />
-           <label htmlFor="free">Yes</label>
-          <input
-            type="radio"
-            id="false"
-            name="free"
-            value="false"
-            required
-            onChange={onChange}
-          />
-           <label htmlFor="free">No</label>
           <br />
           <br />
           <p>Price:</p>
