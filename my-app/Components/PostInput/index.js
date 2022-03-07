@@ -8,6 +8,7 @@ const URL = process.env.NEXT_PUBLIC_API_URL;
 const PostInput = () => {
   const { user } = useUser();
   console.log(user);
+  
   const [formData, setFormData] = useState({
     auth_id: user.sub,
     title: "",
@@ -17,18 +18,21 @@ const PostInput = () => {
     price: 0,
     date: "",
   });
-  const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    async function getUserData() {
-      const resp = await fetch(`${URL}/posts/${user.sub}`);
-      const data = await resp.json();
-      if (data.payload.length > 0) {
-        setPosts([...posts, ...data.payload]);
-      }
+  const [posts, setPosts] = useState([]);
+  const [update, setUpdate] = useState(false);
+
+  async function getUserData() {
+    const resp = await fetch(`${URL}/posts/${user.sub}`);
+    const data = await resp.json();
+    if (data.payload.length > 0) {
+      setPosts([...data.payload]);
     }
+  }
+  
+  useEffect(() => {
     getUserData();
-  }, []);
+  }, [update]);
 
   const { title, description, location, price, date } = formData;
 
@@ -51,7 +55,7 @@ const PostInput = () => {
       console.log(responseMessage);
     }
     postData();
-    setPosts([...posts, formData]);
+    setUpdate(!update);
   };
   return (
     <div className={css.container}>
