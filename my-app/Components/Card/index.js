@@ -8,6 +8,7 @@ import css from "../../styles/card.module.css";
 const Vegcard = ({ data, area }) => {
   const found = data.filter((v) => v.location === area);
   let length = found.length;
+  console.log(data);
 
   if (length === 0 && area === "") {
     return (
@@ -43,6 +44,17 @@ const Vegcard = ({ data, area }) => {
                     <MdLocationOn />
                     {data[idx]?.location}
                   </Card.Text>
+                  <Accordion>
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>Contact</Accordion.Header>
+                      <Accordion.Body>
+                        <div className={css.details}>
+                          <p>NAME: test</p> <p>EMAIL: test@test.com</p>{" "}
+                          <p>PHONE: 1111111111</p>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>{" "}
+                  </Accordion>
                 </Card.Body>
               </Card>
             </Col>
