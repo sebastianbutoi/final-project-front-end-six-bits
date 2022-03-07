@@ -12,8 +12,8 @@ const PostInput = () => {
     auth_id: user.sub,
     title: "",
     description: "",
+    quantity: "",
     location: "",
-    free: null,
     price: 0,
     date: "",
   });
@@ -34,7 +34,8 @@ const PostInput = () => {
     setPosts([...data]);
   }, []);
 
-  const { title, description, location, price, date } = formData;
+  const { title, description, quantity, location, price, date } =
+    formData;
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -54,19 +55,10 @@ const PostInput = () => {
       const responseMessage = await response.json();
       console.log(responseMessage);
     }
-    if (
-      formData.title &&
-      formData.description &&
-      formData.location &&
-      formData.date &&
-      formData.free
-    ) {
-      postData();
-      setUpdate(!update);
-    } else {
-      alert("Please insert all the required fields.");
-    }
+    postData();
+    setUpdate(!update);
   };
+  
   return (
     <div className={css.container}>
       <div className={css.postInput}>
@@ -88,6 +80,7 @@ const PostInput = () => {
               value={title}
               placeholder="Title *"
               autoComplete="off"
+              required
               onChange={onChange}
             ></input>
           </div>{" "}
@@ -101,6 +94,21 @@ const PostInput = () => {
               value={description}
               placeholder="Description *"
               autoComplete="off"
+              required
+              onChange={onChange}
+            ></input>
+          </div>
+          <br />
+          <br />
+          <p>Quantity (e.g. 4, 100g, 1kg)</p>
+          <div className={css.inputContainer}>
+            <input
+              type="text"
+              id="quantity"
+              name="quantity"
+              value={quantity}
+              placeholder="Enter the quantity *"
+              required
               onChange={onChange}
             ></input>
           </div>
@@ -114,28 +122,10 @@ const PostInput = () => {
               value={location}
               placeholder="Location *"
               autoComplete="off"
+              required
               onChange={onChange}
             ></input>
           </div>
-          <br />
-          <br />
-          <p>Is it free? *</p>
-          <input
-            type="radio"
-            id="true"
-            name="free"
-            value="true"
-            onChange={onChange}
-          />
-           <label htmlFor="free">Yes</label>
-          <input
-            type="radio"
-            id="false"
-            name="free"
-            value="false"
-            onChange={onChange}
-          />
-           <label htmlFor="free">No</label>
           <br />
           <br />
           <p>Price:</p>
@@ -159,6 +149,7 @@ const PostInput = () => {
             value={date}
             min="2018-01-01"
             max="2022-12-31"
+            required
             onChange={onChange}
           />
           {"*"}
