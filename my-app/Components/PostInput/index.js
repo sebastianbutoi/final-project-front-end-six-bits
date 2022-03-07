@@ -32,7 +32,7 @@ const PostInput = () => {
   useEffect(async () => {
     const data = await getUserData();
     setPosts([...data]);
-  }, [update]);
+  }, []);
 
   const { title, description, location, price, date } = formData;
 
@@ -168,8 +168,15 @@ const PostInput = () => {
         </form>
       </div>
       <div className={css.postDisplay}>
-        <h1>Your posts</h1>
-        <UserPost data={posts} />
+        {posts[0]?.title === null ? (
+          <h1>You don&apos;t have any posts currently</h1>
+        ) : (
+          <>
+            {" "}
+            <h1>Your posts</h1>
+            <UserPost data={posts} />{" "}
+          </>
+        )}
       </div>
     </div>
   );

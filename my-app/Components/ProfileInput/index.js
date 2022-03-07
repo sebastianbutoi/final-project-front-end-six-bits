@@ -105,8 +105,10 @@ const ProfileInput = () => {
           <br />
           <br />
           <div className={css.btnContainer}>
-            <button type="submit">Update Profile</button>
-          </div> 
+            <button className={css.btn} type="submit">
+              Update Profile
+            </button>
+          </div>
         </form>
       </div>
     </div>
