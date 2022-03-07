@@ -3,11 +3,13 @@ import { useUser } from "@auth0/nextjs-auth0";
 import css from "../../styles/profile.module.css";
 import Image from "next/image";
 import carrots from "../../public/images/carrots.jpg";
+import { useRouter } from "next/router";
 
 const URL = process.env.NEXT_PUBLIC_API_URL;
 
 const ProfileInput = () => {
   const { user } = useUser();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: "",
     secondName: "",
@@ -15,6 +17,7 @@ const ProfileInput = () => {
   });
 
   const { firstName, secondName, phoneNumber } = formData;
+  const [submited, setSubmited] = useState(false);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -22,6 +25,12 @@ const ProfileInput = () => {
       [e.target.name]: e.target.value,
     }));
   };
+
+  useEffect(() => {
+    if (submited) {
+      router.push("/");
+    }
+  }, [submited]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -43,6 +52,8 @@ const ProfileInput = () => {
       console.log(responseMessage);
     }
     createUser();
+    alert("Thank you, your profile has been saved. You will be redirected.");
+    setSubmited(true);
   };
 
   function calculateDate() {
@@ -104,11 +115,9 @@ const ProfileInput = () => {
           <br />
           <br />
           <div className={css.btnContainer}>
-
             <button className={css.btn} type="submit">
               Update Profile
             </button>
-
           </div>
         </form>
       </div>
