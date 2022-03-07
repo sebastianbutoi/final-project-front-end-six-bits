@@ -19,7 +19,6 @@ const PostInput = () => {
   });
 
   const [posts, setPosts] = useState([]);
-  const [update, setUpdate] = useState(false);
 
   async function getUserData() {
     const resp = await fetch(`${URL}/posts/${user.sub}`);
@@ -34,8 +33,7 @@ const PostInput = () => {
     setPosts([...data]);
   }, []);
 
-  const { title, description, quantity, location, price, date } =
-    formData;
+  const { title, description, quantity, location, price, date } = formData;
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -54,11 +52,11 @@ const PostInput = () => {
       });
       const responseMessage = await response.json();
       console.log(responseMessage);
+      setPosts([...posts, { ...responseMessage.payload[0] }]);
     }
     postData();
-    setUpdate(!update);
   };
-  
+
   return (
     <div className={css.container}>
       <div className={css.postInput}>
