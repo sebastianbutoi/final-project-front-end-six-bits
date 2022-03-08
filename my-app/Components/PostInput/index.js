@@ -167,10 +167,13 @@ const PostInput = () => {
           {"*"}
           <br />
           <br />
-          <button type="submit">Post data</button>
+          <button className={css.addPost} type="submit">
+            Add
+          </button>
         </form>
       </div>
       <div className={css.postDisplay}>
+        <h1>Your posts</h1>
         <UserPost data={posts} action={deletePost} />{" "}
       </div>
     </div>

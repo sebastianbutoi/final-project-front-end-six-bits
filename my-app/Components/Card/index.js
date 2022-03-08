@@ -68,9 +68,9 @@ const Vegcard = ({ data, area }) => {
   if (length === 0 && area !== "") {
     return (
       <div className={css.container}>
-        <h2>
-          We couldn&apos;t find any posts for that location so here is all data
-          instead
+        <h2 className={css.missing}>
+          We couldn&apos;t find any posts for that <br></br>location so here are
+          all the posts instead
         </h2>
         <Row id="cardContainer" xs={2} s={2} md={2} lg={5} className="g-4">
           {Array.from({ length: data.length }).map((_, idx) => (
