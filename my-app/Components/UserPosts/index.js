@@ -1,12 +1,11 @@
 import { Card, Col, Row } from "react-bootstrap";
-import useState from "react";
-import Accordion from "react-bootstrap/Accordion";
 import cucumber from "../../public/images/cucumber.jpg";
 import Image from "next/image";
 import css from "../../styles/userpost.module.css";
 import { useRouter } from "next/router";
+import { FaTrashAlt } from "react-icons/fa";
 
-function UserPost({ data }) {
+function UserPost({ data, action }) {
   const router = useRouter();
 
   function forceReload() {
@@ -25,6 +24,12 @@ function UserPost({ data }) {
                     boxShadow: "1px 1px grey",
                   }}
                 >
+                  <button
+                    className={css.deleteBtn}
+                    onClick={() => action(data[idx].post_id)}
+                  >
+                    <FaTrashAlt />
+                  </button>
                   <Image
                     variant="top"
                     alt={data[idx]?.title}

@@ -57,6 +57,20 @@ const PostInput = () => {
     postData();
   };
 
+  const deletePost = (post_id) => {
+    async function remove() {
+      const response = await fetch(`${URL}/posts/${post_id}`, {
+        headers: { "Content-Type": "application/json" },
+        method: "DELETE",
+      });
+      const responseMessage = await response.json();
+      console.log(responseMessage);
+    }
+    remove();
+    const newList = posts.filter((post) => post.post_id !== post_id);
+    setPosts([...newList]);
+  };
+
   return (
     <div className={css.container}>
       <div className={css.postInput}>
@@ -157,7 +171,7 @@ const PostInput = () => {
         </form>
       </div>
       <div className={css.postDisplay}>
-        <UserPost data={posts} />{" "}
+        <UserPost data={posts} action={deletePost} />{" "}
       </div>
     </div>
   );
