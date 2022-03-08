@@ -109,7 +109,7 @@
   background: orange;
   color: white;
 } */
-/* @media only screen and (max-width: 650px) {
+ @media only screen and (max-width: 650px) {
   .home {
     justify-content: center;
     align-items: center;
@@ -126,7 +126,7 @@
     background-color: #121619;
     color: white;
   }
-  /* .headerContainer h1 {
+   .headerContainer h1 {
     font-size: 40px;
     height: 30px;
     color: white;
@@ -136,4 +136,4 @@
     color: white;
   } 
   
-}z */ ;
+}
