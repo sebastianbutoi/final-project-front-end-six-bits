@@ -3,19 +3,15 @@
   padding-right: 2vw;
   text-align: center;
 }
-.cardTop {
-  display: flex;
-  justify-content: space-around;
-}
 
-.details {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
 
-.missing {
-  font-family: "Chewy";
-  font-size: 3rem;
-  padding-bottom: 30px;
+@media screen and (max-width: 600px){ 
+.wrapper {
+   grid-template-columns: repeat(auto-fit, maxmin(14rem, 16rem))
+}
+.card {
+flex-direction:column;
+text-align: center;
+min-width: 14rem
+}
 }

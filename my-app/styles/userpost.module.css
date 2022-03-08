@@ -4,8 +4,7 @@
   overflow-y: auto;
   max-height: 600px;
 }
-
-.deleteBtn {
+.deleteBtn{
   border: none;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -18,13 +17,13 @@
   margin-left: 25%;
   margin-top: 15px;
 }
-
-.deleteBtn:hover {
-  background-color: #dfa633;
+.deleteBtn:hover{
+  background-color: #dfa633 ;
 }
 
-@media (max-width: 600px) {
-  .title {
+@media (max-width: 600px){
+  .title{
     margin-top: 20px;
   }
 }
+

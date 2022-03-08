@@ -3,7 +3,7 @@
   justify-content: space-around;
   padding-top: 50px;
 }
-.addPost {
+.addPost{
   border: none;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -16,20 +16,20 @@
   margin-left: 25%;
   margin-top: 15px;
 }
-.addPost:hover {
-  background-color: #dfa633;
+.addPost:hover{
+  background-color: #dfa633 ;
 }
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    margin: 30px 20px;
+      flex-direction: column;
+      margin: 30px 20px;
+
   }
 }
 .postInput {
   background-color: rgb(248, 248, 248);
   padding: 100px;
   border-radius: 20px;
-  min-width: 600px;
 }
 
 .inputTitle {
@@ -43,14 +43,13 @@
 
 .postDisplay {
   text-align: center;
-  max-width: 600px;
-  min-width: 600px;
+  max-width: 800px;
+  
 }
 @media (max-width: 768px) {
+  
   .postDisplay {
     margin: 30px 0;
-  }
-  .postInput {
-    margin: 0 auto;
+    
   }
 }
