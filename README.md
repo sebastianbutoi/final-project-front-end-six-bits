@@ -16,3 +16,33 @@ With this in mind, we decided to put our efforts towards solving the problem of 
 ## Our Solution
 
 We created an app that works as a platform to connect people who have excess fresh produce (whether this is farmers or home growers) to people who are happy to buy vegetables directly from producers even if they don't meet the standards held by supermarkets.
+
+## Work Flow - Tickets
+[Trello](https://trello.com/sixbits2)
+
+## Project MockUp:
+[Miro Board](https://miro.com/app/board/uXjVONMC4Tw=/)
+
+[Figma](https://www.figma.com/file/3p7PyRYodOVWr08FAv2QTQ/Food-waste-app?node-id=0%3A1)
+
+
+## Installation🔧
+
+1. Clone this repo by running `git clone https://github.com/SchoolOfCode/final-project-front-end-six-bits.git`
+2. `cd MY-APP`
+3. `npm install`
+4. `npm run dev`
+
+## Common Commands  🖥️ 
+
+1. `dev` Starts local development server at [http://localhost:3000](http://localhost:3000)
+2. `build` Runs build
+3. `start` Runs next js server
+
+## Built With ⚡
+
+1. Node
+2. Express
+3. React
+4. Next JS
+5. Babel
