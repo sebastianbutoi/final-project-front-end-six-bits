@@ -7,8 +7,9 @@ import Head from "next/head";
 const URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function Profile() {
-  const { user } = useUser();
+  const { user, isLoading } = useUser();
   const [userData, setUserData] = useState([]);
+  const [arrived, setArrived] = useState(false);
 
   useEffect(() => {
     async function getUserData() {
@@ -17,19 +18,43 @@ export default function Profile() {
       if (data.payload.length > 0) {
         setUserData([...userData, ...data.payload]);
       }
+      setArrived(true);
     }
     getUserData();
-  }, []);
+  }, [user?.sub]);
 
   return (
     <div>
       <Head>
         <title>SalVeg | Profile</title>
       </Head>
-
-      {userData.length === 0 ? <ProfileInput /> : <PostInput />}
+      {arrived ? (
+        <div>
+          {userData[0]?.first_name === undefined ? (
+            <ProfileInput />
+          ) : (
+            <PostInput />
+          )}
+        </div>
+      ) : (
+        <h1>Loading...</h1>
+      )}
     </div>
   );
+
+  // if (!arrived) {
+  //   return <div>Loading...</div>;
+  // }
+
+  // return (
+  //   <div>
+  //     <Head>
+  //       <title>SalVeg | Profile</title>
+  //     </Head>
+
+  //     {userData[0]?.first_name === undefined ? <ProfileInput /> : <PostInput />}
+  //   </div>
+  // );
 }
 
 export const getServerSideProps = withPageAuthRequired();
