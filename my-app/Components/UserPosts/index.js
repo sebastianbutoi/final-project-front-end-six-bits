@@ -22,6 +22,8 @@ function UserPost({ data, action }) {
                 <Card
                   style={{
                     boxShadow: "1px 1px grey",
+                  height:266,
+                  width:160,
                   }}
                 >
                   <button

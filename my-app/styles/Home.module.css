@@ -48,6 +48,24 @@
   background-color: rgb(0, 0, 0);
   color: #f7c151;
 }
+@media (max-width: 600px){
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+  }
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .titleText{
+    font-size: 65px;
+  }
+  .subText{
+    font-size: 22px;
+  }
+  
+}
 
 /* .home {
   width: 100%;

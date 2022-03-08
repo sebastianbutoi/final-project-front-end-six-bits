@@ -46,6 +46,10 @@
   max-width: 800px;
   
 }
+/* .g-4{
+  width: 800px;
+  height:800px;
+} */
 @media (max-width: 768px) {
   
   .postDisplay {

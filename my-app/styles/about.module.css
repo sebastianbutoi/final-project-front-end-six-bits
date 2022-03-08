@@ -181,7 +181,7 @@
 }
 
 .donateicon {
-  color: #9acd32;
+  color: #1f5300;
   width: 150px;
   height: 150px;
 }
@@ -209,7 +209,9 @@
   cursor: pointer;
   border: none;
 }
-
+.button:hover{
+  background-color: #dfa633 ;
+}
 .carouselCaption {
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-text-stroke: 1px black;
@@ -241,8 +243,14 @@
       align-items: center;
       justify-content: center;
     }
-    .carouselCaption{
-      font-size: 22px;
+    .title{
+      font-size: 32px;
+    }
+    .contentTitle{
+      font-size: 32px;
+    }
+    .slogan{
+      font-size: 15px;
     }
   }
 /* .button {
