@@ -75,7 +75,11 @@ const Vegcard = ({ data, area }) => {
         <Row id="cardContainer" xs={2} s={2} md={2} lg={5} className="g-4">
           {Array.from({ length: data.length }).map((_, idx) => (
             <Col key={idx}>
-              <Card>
+              <Card
+                style={{
+                  boxShadow: "1px 1px grey",
+                }}
+              >
                 <Image
                   variant="top"
                   alt={data[idx]?.title}
@@ -134,7 +138,11 @@ const Vegcard = ({ data, area }) => {
         >
           {Array.from({ length: length }).map((_, idx) => (
             <Col key={idx}>
-              <Card>
+              <Card
+                style={{
+                  boxShadow: "1px 1px grey",
+                }}
+              >
                 <Image
                   variant="top"
                   alt={found[idx]?.title}
