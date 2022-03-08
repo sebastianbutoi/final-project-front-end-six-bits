@@ -4,8 +4,15 @@ import Accordion from "react-bootstrap/Accordion";
 import cucumber from "../../public/images/cucumber.jpg";
 import Image from "next/image";
 import css from "../../styles/userpost.module.css";
+import { useRouter } from "next/router";
 
 function UserPost({ data }) {
+  const router = useRouter();
+
+  function forceReload() {
+    router.reload();
+  }
+
   if (data[0]?.title !== null) {
     return (
       <div className={css.container}>
@@ -47,7 +54,12 @@ function UserPost({ data }) {
       </div>
     );
   } else {
-    return <h1>You don&apos;t have any posts at the moment</h1>;
+    return (
+      <div>
+        <h1>You don&apos;t have any posts at the moment</h1>
+        <button onClick={forceReload}>Refresh</button>
+      </div>
+    );
   }
 }
 

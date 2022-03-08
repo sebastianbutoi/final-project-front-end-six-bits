@@ -7,7 +7,7 @@ const URL = process.env.NEXT_PUBLIC_API_URL;
 
 const PostInput = () => {
   const { user } = useUser();
-
+  console.log(user);
   const [formData, setFormData] = useState({
     auth_id: user.sub,
     title: "",
