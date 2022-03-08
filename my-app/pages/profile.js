@@ -7,7 +7,7 @@ import Head from "next/head";
 const URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function Profile() {
-  const { user, isLoading } = useUser();
+  const { user } = useUser();
   const [userData, setUserData] = useState([]);
   const [arrived, setArrived] = useState(false);
 
