@@ -38,6 +38,7 @@ We created an app that works as a platform to connect people who have excess fre
 1. `dev` Starts local development server at [http://localhost:3000](http://localhost:3000)
 2. `build` Runs build
 3. `start` Runs next js server
+4. `test` Runs the test
 
 ## Built With ⚡
 
@@ -46,3 +47,8 @@ We created an app that works as a platform to connect people who have excess fre
 3. React
 4. Next JS
 5. Babel
+
+## Back-End README
+
+[Back-end-ReadMe](https://github.com/SchoolOfCode/final-project-api-six-bits.git)
+
