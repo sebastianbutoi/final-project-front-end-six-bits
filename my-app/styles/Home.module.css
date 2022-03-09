@@ -19,11 +19,11 @@
   white-space: pre;
   font-size: 5vw;
   font-family: "Chewy";
-  color: #0c0c40;
+  color: #000000;
 }
 
 .altColour {
-  color: #06b23c;
+  color: #1f5300;
 }
 
 .subText {
@@ -48,7 +48,7 @@
   background-color: rgb(0, 0, 0);
   color: #f7c151;
 }
-@media (max-width: 600px){
+@media (max-width: 600px) {
   .rightSide {
     display: flex;
     flex-direction: column;
@@ -56,19 +56,17 @@
     margin: 0 45px;
   }
   .homeImage1 {
-    display:none;
+    display: none;
     /* flex-direction: column; */
   }
-  
-  .titleText{
+
+  .titleText {
     font-size: 90px;
-    
   }
-  .subText{
+  .subText {
     font-size: 42px;
-    
   }
-  .link{
+  .link {
     width: 85%;
     margin: 0 30px;
   }
@@ -134,7 +132,7 @@
   background: orange;
   color: white;
 } */
- @media only screen and (max-width: 650px) {
+@media only screen and (max-width: 650px) {
   .home {
     justify-content: center;
     align-items: center;
@@ -151,7 +149,7 @@
     background-color: #121619;
     color: white;
   }
-   .headerContainer h1 {
+  .headerContainer h1 {
     font-size: 40px;
     height: 30px;
     color: white;
@@ -159,6 +157,5 @@
   .headerContainer p {
     font-size: 30px;
     color: white;
-  } 
-  
+  }
 }
