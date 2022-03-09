@@ -1,6 +1,7 @@
 import { Card, Col, Row } from "react-bootstrap";
 import Image from "next/image";
 import css from "../../styles/card.module.css";
+import Accordion from "react-bootstrap/Accordion";
 
 const Vegcard = ({ data, area }) => {
   const found = data.filter((v) => v.location === area);
@@ -37,6 +38,17 @@ const Vegcard = ({ data, area }) => {
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
                   <Card.Text>{data[idx]?.location}</Card.Text>
+                  <Accordion>
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>Contact the poster</Accordion.Header>
+                      <Accordion.Body>
+                        <div className={css.contactDetails}>
+                          <p>Name: {data[idx]?.first_name}</p>
+                          <p>Email: {data[idx]?.email}</p>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
                 </Card.Body>
               </Card>
             </Col>
@@ -49,9 +61,9 @@ const Vegcard = ({ data, area }) => {
   if (length === 0 && area !== "") {
     return (
       <div className={css.container}>
-        <h2>
-          We couldn&apos;t find any posts for that location so here is all data
-          instead
+        <h2 className={css.missingText}>
+          We couldn&apos;t find any posts for that location<br></br> so here are
+          all the posts instead
         </h2>
         <Row id="cardContainer" xs={2} s={2} md={2} lg={5} className="g-4">
           {Array.from({ length: data.length }).map((_, idx) => (
@@ -77,6 +89,17 @@ const Vegcard = ({ data, area }) => {
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
                   <Card.Text>{data[idx]?.location}</Card.Text>
+                  <Accordion>
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>Contact the poster</Accordion.Header>
+                      <Accordion.Body>
+                        <div className={css.contactDetails}>
+                          <p>Name: {data[idx]?.first_name}</p>
+                          <p>Email: {data[idx]?.email}</p>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
                 </Card.Body>
               </Card>
             </Col>
@@ -121,6 +144,17 @@ const Vegcard = ({ data, area }) => {
                   <Card.Text>{found[idx]?.date}</Card.Text>
                   <Card.Text>£{found[idx]?.price}</Card.Text>
                   <Card.Text>{found[idx]?.location}</Card.Text>
+                  <Accordion>
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>Contact the poster</Accordion.Header>
+                      <Accordion.Body>
+                        <div className={css.contactDetails}>
+                          <p>Name: {found[idx]?.first_name}</p>
+                          <p>Email: {found[idx]?.email}</p>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
                 </Card.Body>
               </Card>
             </Col>
