@@ -55,7 +55,7 @@ const PostInput = () => {
       setPosts([...posts, { ...responseMessage.payload[0] }]);
     }
     postData();
-    console.log(formData);
+    // console.log(formData);
   };
 
   const deletePost = (post_id) => {
@@ -87,7 +87,7 @@ const PostInput = () => {
           Email: {posts.length > 0 ? posts[0].email : ""}
         </p>
         <form onSubmit={onSubmit}>
-          <div>
+          <div className={css.inputContainer}>
             <label htmlFor="title">Choose a vegetable:</label>
             <br></br>
             <select
@@ -96,6 +96,7 @@ const PostInput = () => {
               defaultValue={""}
               onChange={onChange}
               required
+              className={css.dropdown}
             >
               <option value="" disabled></option>
               <option value="Cucumber">Cucumber</option>
@@ -110,19 +111,14 @@ const PostInput = () => {
               <option value="Sprouts">Sprouts</option>
             </select>
             <br></br>
-            {/* <input
-              type="text"
-              id="title"
-              name="title"
-              value={title}
-              placeholder="Title *"
-              autoComplete="off"
-              required
-              onChange={onChange}
-            ></input> */}
           </div>{" "}
           <br />
           <br />
+          <label htmlFor="Description">
+            Description{" "}
+            <span className={css.freeText}>100 characters maximum</span>
+          </label>
+          <br></br>
           <div className={css.inputContainer}>
             <input
               type="text"
@@ -133,11 +129,15 @@ const PostInput = () => {
               autoComplete="off"
               required
               onChange={onChange}
+              maxLength="100"
             ></input>
           </div>
           <br />
           <br />
-          <p>Quantity (e.g. 4, 100g, 1kg)</p>
+          <label htmlFor="Description">
+            Quantity <span className={css.freeText}>(e.g 4, 100g, 1kg)</span>
+          </label>
+          <br></br>
           <div className={css.inputContainer}>
             <input
               type="text"
@@ -152,28 +152,45 @@ const PostInput = () => {
           <br />
           <br />
           <div className={css.inputContainer}>
-            <input
-              type="text"
-              id="location"
+            <label htmlFor="location">Where is your nearest location?</label>
+            <br></br>
+            <select
+              className={css.dropdown}
               name="location"
-              value={location}
-              placeholder="Location *"
-              autoComplete="off"
-              required
+              id="location"
+              defaultValue={""}
               onChange={onChange}
-            ></input>
+              required
+            >
+              <option value="" disabled></option>
+              <option value="London">London</option>
+              <option value="Torquay">Torquay</option>
+              <option value="Birmingham">Birmingham</option>
+              <option value="Manchester">Manchester</option>
+              <option value="Edinburgh">Edinburgh</option>
+              <option value="Liverpool">Liverpool</option>
+            </select>
+            <br></br>
           </div>
           <br />
           <br />
-          <p>Price:</p>
-          <input
-            type="text"
-            id="price"
-            name="price"
-            value={price}
-            placeholder="Enter the price"
-            onChange={onChange}
-          ></input>
+          <label htmlFor="location">
+            Price{" "}
+            <span className={css.freeText}>
+              (In £ - Leave as 0 if your post is free)
+            </span>
+          </label>
+          <br></br>
+          <div className={css.inputContainer}>
+            <input
+              type="text"
+              id="price"
+              name="price"
+              value={price}
+              placeholder="Enter the price"
+              onChange={onChange}
+            ></input>
+          </div>
           <br />
           <br />
           <label htmlFor="start">
@@ -191,8 +208,6 @@ const PostInput = () => {
             onChange={onChange}
           />
           {/* {"*"} */}
-          <br />
-          <br />
           <button className={css.addPost} type="submit">
             Add
           </button>
