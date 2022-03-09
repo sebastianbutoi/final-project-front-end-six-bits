@@ -1,13 +1,10 @@
 import { Card, Col, Row } from "react-bootstrap";
-import Accordion from "react-bootstrap/Accordion";
-import { MdLocationOn } from "react-icons/md";
 import Image from "next/image";
 import css from "../../styles/card.module.css";
 
 const Vegcard = ({ data, area }) => {
   const found = data.filter((v) => v.location === area);
   let length = found.length;
-  console.log(data);
 
   if (length === 0 && area === "") {
     return (
@@ -39,22 +36,7 @@ const Vegcard = ({ data, area }) => {
                   <Card.Text>{data[idx]?.description}</Card.Text>
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
-                  <Card.Text>
-                    <MdLocationOn />
-                    {data[idx]?.location}
-                  </Card.Text>
-                  <Accordion>
-                    <Accordion.Item eventKey="0">
-                      <Accordion.Header>Contact</Accordion.Header>
-                      <Accordion.Body>
-                        <div className={css.details}>
-                          <p>NAME: {data[idx]?.first_name}</p>{" "}
-                          <p>EMAIL: {data[idx]?.email}</p>{" "}
-                          <p>PHONE: {data[idx]?.phone_number}</p>
-                        </div>
-                      </Accordion.Body>
-                    </Accordion.Item>{" "}
-                  </Accordion>
+                  <Card.Text>{data[idx]?.location}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -67,18 +49,14 @@ const Vegcard = ({ data, area }) => {
   if (length === 0 && area !== "") {
     return (
       <div className={css.container}>
-        <h2 className={css.missing}>
-          We couldn&apos;t find any posts for that <br></br>location so here are
-          all the posts instead
+        <h2>
+          We couldn&apos;t find any posts for that location so here is all data
+          instead
         </h2>
         <Row id="cardContainer" xs={2} s={2} md={2} lg={5} className="g-4">
           {Array.from({ length: data.length }).map((_, idx) => (
             <Col key={idx}>
-              <Card
-                style={{
-                  boxShadow: "1px 1px grey",
-                }}
-              >
+              <Card>
                 <Image
                   variant="top"
                   alt={data[idx]?.title}
@@ -98,22 +76,7 @@ const Vegcard = ({ data, area }) => {
                   <Card.Text>{data[idx]?.description}</Card.Text>
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
-                  <Card.Text>
-                    <MdLocationOn />
-                    {data[idx]?.location}
-                  </Card.Text>
-                  <Accordion>
-                    <Accordion.Item eventKey="0">
-                      <Accordion.Header>Contact</Accordion.Header>
-                      <Accordion.Body>
-                        <div className={css.details}>
-                          <p>{data[idx]?.first_name}</p>{" "}
-                          <p>{data[idx]?.email}</p>{" "}
-                          <p>{data[idx]?.phone_number}</p>
-                        </div>
-                      </Accordion.Body>
-                    </Accordion.Item>{" "}
-                  </Accordion>
+                  <Card.Text>{data[idx]?.location}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -137,11 +100,7 @@ const Vegcard = ({ data, area }) => {
         >
           {Array.from({ length: length }).map((_, idx) => (
             <Col key={idx}>
-              <Card
-                style={{
-                  boxShadow: "1px 1px grey",
-                }}
-              >
+              <Card>
                 <Image
                   variant="top"
                   alt={found[idx]?.title}
@@ -161,22 +120,7 @@ const Vegcard = ({ data, area }) => {
                   <Card.Text>{found[idx]?.description}</Card.Text>
                   <Card.Text>{found[idx]?.date}</Card.Text>
                   <Card.Text>£{found[idx]?.price}</Card.Text>
-                  <Card.Text>
-                    <MdLocationOn />
-                    {data[idx]?.location}
-                  </Card.Text>
-                  <Accordion>
-                    <Accordion.Item eventKey="0">
-                      <Accordion.Header>Contact</Accordion.Header>
-                      <Accordion.Body>
-                        <div className={css.details}>
-                          <p>{found[idx]?.first_name}</p>{" "}
-                          <p>{found[idx]?.email}</p>{" "}
-                          <p>{found[idx]?.phone_number}</p>
-                        </div>
-                      </Accordion.Body>
-                    </Accordion.Item>{" "}
-                  </Accordion>
+                  <Card.Text>{found[idx]?.location}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>

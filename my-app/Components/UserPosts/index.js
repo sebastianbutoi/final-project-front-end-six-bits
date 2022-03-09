@@ -19,8 +19,11 @@ function UserPost({ data, action }) {
             {Array.from({ length: data.length }).map((_, idx) => (
               <Col key={idx}>
                 <Card
+                  className={css.cardContainer}
                   style={{
                     boxShadow: "1px 1px grey",
+                    // height:266,
+                    // width:160,
                   }}
                 >
                   <button

@@ -2,9 +2,11 @@
   text-align: center;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 600px;
+  max-height: 800px;
 }
 
+.cardContainer {
+}
 .deleteBtn {
   border: none;
   border-radius: 5px;
@@ -18,7 +20,6 @@
   margin-left: 25%;
   margin-top: 15px;
 }
-
 .deleteBtn:hover {
   background-color: #dfa633;
 }

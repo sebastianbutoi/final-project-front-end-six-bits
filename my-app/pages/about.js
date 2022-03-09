@@ -20,7 +20,7 @@ function About() {
       <Carousel
         style={{
           position: "relative",
-          width: "50vw",
+          width: "85%",
           margin: "0 auto",
         }}
       >
@@ -104,8 +104,8 @@ function About() {
             id={css.image}
             src={Farmwaste}
             alt="Card image cap"
-            width={400}
-            height={300}
+            width={600}
+            height={500}
           ></Image>
           <div className={css.textContent}>
             <h2 className={css.contentTitle}>
@@ -130,8 +130,8 @@ function About() {
             id={css.image}
             src={Farmwaste}
             alt="Card image cap"
-            width={400}
-            height={300}
+            width={600}
+            height={500}
           ></Image>
           <div className={css.textContent}>
             <h2 className={css.contentTitle}>You can make a difference</h2>
@@ -159,7 +159,7 @@ function About() {
       <div className={css.bottomContainer}>
         <div className={css.infoContainer}>
           <GiFruitBowl className={css.donateicon} />
-          <button className={css.button}>SalVeg our fruit/veg</button>
+          <button className={css.button}>Our Product</button>
         </div>
         <div className={css.infoContainer}>
           <FaHandsHelping className={css.donateicon} />
