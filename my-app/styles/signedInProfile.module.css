@@ -62,4 +62,7 @@
     font-size: 1.45rem;
     padding-bottom: 15px;
   }
+  .postDisplay{
+    min-width: 300px;
+  }
 }

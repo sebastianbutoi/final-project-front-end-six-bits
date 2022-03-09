@@ -64,7 +64,7 @@ function UserPost({ data, action }) {
     return (
       <div>
         <h1>You don&apos;t have any posts at the moment</h1>
-        <button onClick={forceReload}>Refresh</button>
+        <button className={css.refreshBtn} onClick={forceReload}>Refresh</button>
       </div>
     );
   }
