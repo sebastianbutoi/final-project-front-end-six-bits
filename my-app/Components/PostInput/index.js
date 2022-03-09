@@ -7,7 +7,7 @@ const URL = process.env.NEXT_PUBLIC_API_URL;
 
 const PostInput = () => {
   const { user } = useUser();
-  console.log(user);
+
   const [formData, setFormData] = useState({
     auth_id: user.sub,
     title: "",
@@ -54,7 +54,8 @@ const PostInput = () => {
       console.log(responseMessage);
       setPosts([...posts, { ...responseMessage.payload[0] }]);
     }
-    postData();
+    // postData();
+    console.log(formData);
   };
 
   const deletePost = (post_id) => {
@@ -71,6 +72,8 @@ const PostInput = () => {
     setPosts([...newList]);
   };
 
+  // console.log(formData);
+
   return (
     <div className={css.container}>
       <div className={css.postInput}>
@@ -84,8 +87,30 @@ const PostInput = () => {
           Email: {posts.length > 0 ? posts[0].email : ""}
         </p>
         <form onSubmit={onSubmit}>
-          <div className={css.inputContainer}>
-            <input
+          <div>
+            <label htmlFor="vegetable">Choose a vegetable:</label>
+            <br></br>
+            <select
+              name="title"
+              id="title"
+              defaultValue={""}
+              onChange={onChange}
+              required
+            >
+              <option value="" disabled></option>
+              <option value="Cucumber">Cucumber</option>
+              <option value="Potato">Potato</option>
+              <option value="Carrot">Carrot</option>
+              <option value="Broccoli">Broccoli</option>
+              <option value="Tomato">Tomato</option>
+              <option value="Onion">Onion</option>
+              <option value="Peas">Peas</option>
+              <option value="Peppers">Peppers</option>
+              <option value="Spinach">Spinach</option>
+              <option value="Sprouts">Sprouts</option>
+            </select>
+            <br></br>
+            {/* <input
               type="text"
               id="title"
               name="title"
@@ -94,7 +119,7 @@ const PostInput = () => {
               autoComplete="off"
               required
               onChange={onChange}
-            ></input>
+            ></input> */}
           </div>{" "}
           <br />
           <br />
