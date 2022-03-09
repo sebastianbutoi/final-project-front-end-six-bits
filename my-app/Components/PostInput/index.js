@@ -54,7 +54,7 @@ const PostInput = () => {
       console.log(responseMessage);
       setPosts([...posts, { ...responseMessage.payload[0] }]);
     }
-    // postData();
+    postData();
     console.log(formData);
   };
 
@@ -88,7 +88,7 @@ const PostInput = () => {
         </p>
         <form onSubmit={onSubmit}>
           <div>
-            <label htmlFor="vegetable">Choose a vegetable:</label>
+            <label htmlFor="title">Choose a vegetable:</label>
             <br></br>
             <select
               name="title"
@@ -179,7 +179,8 @@ const PostInput = () => {
           <label htmlFor="start">
             <span className={css.date}>Date: </span>
           </label>
-          <input className={css.calendar}
+          <input
+            className={css.calendar}
             type="date"
             id="date"
             name="date"
