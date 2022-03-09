@@ -47,7 +47,9 @@ function UserPost({ data, action }) {
                       fontWeight: "bold",
                     }}
                   >
-                    <Card.Title>{data[idx]?.title}</Card.Title>
+                    <Card.Title>
+                      {data[idx]?.quantity} {data[idx]?.title}
+                    </Card.Title>
                     <Card.Text>{data[idx]?.description}</Card.Text>
                     <Card.Text>{data[idx]?.date}</Card.Text>
                     <Card.Text>£{data[idx]?.price}</Card.Text>
@@ -64,7 +66,9 @@ function UserPost({ data, action }) {
     return (
       <div>
         <h1>You don&apos;t have any posts at the moment</h1>
-        <button className={css.refreshBtn} onClick={forceReload}>Refresh</button>
+        <button className={css.refreshBtn} onClick={forceReload}>
+          Refresh
+        </button>
       </div>
     );
   }
