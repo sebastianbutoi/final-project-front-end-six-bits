@@ -2,12 +2,11 @@ import css from "../styles/about.module.css";
 import { Carousel } from "react-bootstrap";
 import Image from "next/image";
 import Head from "next/head";
+import foodwaste from "/public/images/aboutPageImages/foodwaste.jpeg";
 import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg";
 import carouselImage1 from "/public/images/aboutPageImages/carouselImage1.jpg";
 import carouselImage2 from "/public/images/aboutPageImages/carouselImage2.jpg";
 import { BiDonateHeart } from "react-icons/bi";
-import Helpinghand from "/public/images/aboutPageImages/helpinghand.png";
-import SalvegIcon from "/public/images/aboutPageImages/salveg.png";
 import { GiFruitBowl } from "react-icons/gi";
 import { FaHandsHelping } from "react-icons/fa";
 
@@ -34,7 +33,7 @@ function About() {
         >
           <Image
             className="d-block w-100"
-            src={Farmwaste}
+            src={foodwaste}
             alt="First slide"
             layout="fill"
             objectFit="fill"

@@ -35,7 +35,7 @@ function UserPost({ data, action }) {
                   <Image
                     variant="top"
                     alt={data[idx]?.title}
-                    src={`/${data[idx]?.title}.jpg`}
+                    src={`/${data[idx]?.title}.png`}
                     height={266}
                     width={160}
                     priority="true"

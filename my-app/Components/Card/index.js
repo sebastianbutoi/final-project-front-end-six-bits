@@ -21,7 +21,7 @@ const Vegcard = ({ data, area }) => {
                 <Image
                   variant="top"
                   alt={data[idx]?.title}
-                  src={`/${data[idx]?.title}.jpg`}
+                  src={`/${data[idx]?.title}.png`}
                   height={266}
                   width={160}
                   priority="true"
@@ -33,7 +33,9 @@ const Vegcard = ({ data, area }) => {
                     fontWeight: "bold",
                   }}
                 >
-                  <Card.Title>{data[idx]?.title}</Card.Title>
+                  <Card.Title>
+                    {data[idx]?.quantity} {data[idx]?.title}
+                  </Card.Title>
                   <Card.Text>{data[idx]?.description}</Card.Text>
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
@@ -72,7 +74,7 @@ const Vegcard = ({ data, area }) => {
                 <Image
                   variant="top"
                   alt={data[idx]?.title}
-                  src={`/${data[idx]?.title}.jpg`}
+                  src={`/${data[idx]?.title}.png`}
                   height={266}
                   width={160}
                   priority="true"
@@ -84,7 +86,9 @@ const Vegcard = ({ data, area }) => {
                     fontWeight: "bold",
                   }}
                 >
-                  <Card.Title>{data[idx]?.title}</Card.Title>
+                  <Card.Title>
+                    {data[idx]?.quantity} {data[idx]?.title}
+                  </Card.Title>
                   <Card.Text>{data[idx]?.description}</Card.Text>
                   <Card.Text>{data[idx]?.date}</Card.Text>
                   <Card.Text>£{data[idx]?.price}</Card.Text>
@@ -127,7 +131,7 @@ const Vegcard = ({ data, area }) => {
                 <Image
                   variant="top"
                   alt={found[idx]?.title}
-                  src={`/${data[idx]?.title}.jpg`}
+                  src={`/${data[idx]?.title}.png`}
                   height={266}
                   width={160}
                   priority="true"
@@ -139,7 +143,9 @@ const Vegcard = ({ data, area }) => {
                     fontWeight: "bold",
                   }}
                 >
-                  <Card.Title>{found[idx]?.title}</Card.Title>
+                  <Card.Title>
+                    {found[idx]?.quantity} {found[idx]?.title}
+                  </Card.Title>
                   <Card.Text>{found[idx]?.description}</Card.Text>
                   <Card.Text>{found[idx]?.date}</Card.Text>
                   <Card.Text>£{found[idx]?.price}</Card.Text>
