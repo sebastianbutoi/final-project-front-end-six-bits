@@ -1,7 +1,6 @@
 import { Card, Col, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { MdLocationOn } from "react-icons/md";
-import cucumber from "../../public/images/cucumber.jpg";
 import Image from "next/image";
 import css from "../../styles/card.module.css";
 
@@ -24,7 +23,7 @@ const Vegcard = ({ data, area }) => {
                 <Image
                   variant="top"
                   alt={data[idx]?.title}
-                  src={cucumber}
+                  src={`/${data[idx]?.title}.jpg`}
                   height={266}
                   width={160}
                   priority="true"
@@ -83,7 +82,7 @@ const Vegcard = ({ data, area }) => {
                 <Image
                   variant="top"
                   alt={data[idx]?.title}
-                  src={cucumber}
+                  src={`/${data[idx]?.title}.jpg`}
                   height={266}
                   width={160}
                   priority="true"
@@ -146,7 +145,7 @@ const Vegcard = ({ data, area }) => {
                 <Image
                   variant="top"
                   alt={found[idx]?.title}
-                  src={cucumber}
+                  src={`/${data[idx]?.title}.jpg`}
                   height={266}
                   width={160}
                   priority="true"

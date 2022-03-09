@@ -1,5 +1,4 @@
 import { Card, Col, Row } from "react-bootstrap";
-import cucumber from "../../public/images/cucumber.jpg";
 import Image from "next/image";
 import css from "../../styles/userpost.module.css";
 import { useRouter } from "next/router";
@@ -33,7 +32,7 @@ function UserPost({ data, action }) {
                   <Image
                     variant="top"
                     alt={data[idx]?.title}
-                    src={cucumber}
+                    src={`/${data[idx]?.title}.jpg`}
                     height={266}
                     width={160}
                     priority="true"
