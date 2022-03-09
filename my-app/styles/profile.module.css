@@ -40,8 +40,8 @@
 
 .imageContainer {
   background-color: black;
-  height: 1000px;
-  width: 1000px;
+  height: 100%;
+  width: 100%;
 }
 @media screen and (max-width: 600px){
   .container{

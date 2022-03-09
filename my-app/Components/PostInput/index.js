@@ -177,9 +177,9 @@ const PostInput = () => {
           <br />
           <br />
           <label htmlFor="start">
-            <span>Date: </span>
+            <span className={css.date}>Date: </span>
           </label>
-          <input
+          <input className={css.calendar}
             type="date"
             id="date"
             name="date"
@@ -189,7 +189,7 @@ const PostInput = () => {
             required
             onChange={onChange}
           />
-          {"*"}
+          {/* {"*"} */}
           <br />
           <br />
           <button className={css.addPost} type="submit">
