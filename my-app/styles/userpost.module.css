@@ -46,6 +46,12 @@
 
 
 @media (max-width: 600px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
   .title {
     margin-top: 20px;
   }
@@ -61,5 +67,8 @@
   .deleteBtn{
      display: block;
      margin: 15px auto;
+  }
+  .container{
+    max-height: 0;
   }
 }
