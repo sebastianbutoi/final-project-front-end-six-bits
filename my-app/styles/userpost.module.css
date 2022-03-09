@@ -28,4 +28,17 @@
   .title {
     margin-top: 20px;
   }
+  .cardContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 10px auto;
+  }
+  .deleteBtn{
+     display: block;
+     margin: 15px auto;
+  }
 }
