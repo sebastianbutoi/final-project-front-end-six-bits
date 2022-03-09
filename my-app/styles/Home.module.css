@@ -52,19 +52,26 @@
   .rightSide {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin: 0 45px;
   }
-  .rightSide {
-    display: flex;
-    flex-direction: column;
+  .homeImage1 {
+    display:none;
+    /* flex-direction: column; */
   }
   
   .titleText{
-    font-size: 65px;
+    font-size: 90px;
+    
   }
   .subText{
-    font-size: 22px;
+    font-size: 42px;
+    
   }
-  
+  .link{
+    width: 85%;
+    margin: 0 30px;
+  }
 }
 
 /* .home {
