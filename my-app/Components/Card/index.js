@@ -139,7 +139,7 @@ const Vegcard = ({ data, area }) => {
                 <Image
                   variant="top"
                   alt={found[idx]?.title}
-                  src={`/${data[idx]?.title}.png`}
+                  src={`/${found[idx]?.title}.png`}
                   height={266}
                   width={160}
                   priority="true"
