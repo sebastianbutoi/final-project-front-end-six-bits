@@ -9,6 +9,7 @@ import carouselImage2 from "/public/images/aboutPageImages/carouselImage2.jpg";
 import { BiDonateHeart } from "react-icons/bi";
 import { GiFruitBowl } from "react-icons/gi";
 import { FaHandsHelping } from "react-icons/fa";
+import Link from "next/link";
 
 function About() {
   return (
@@ -36,7 +37,7 @@ function About() {
             src={foodwaste}
             alt="First slide"
             layout="fill"
-            objectFit="fill"
+            objectFit="cover"
           />
           <Carousel.Caption>
             <h3 className={css.carouselCaption}>
@@ -59,7 +60,7 @@ function About() {
             src={carouselImage1}
             alt="Second slide"
             layout="fill"
-            objectFit="fill"
+            objectFit="cover"
           />
           <Carousel.Caption>
             <h3 className={css.carouselCaption}>
@@ -82,7 +83,7 @@ function About() {
             src={carouselImage2}
             alt="Third slide"
             layout="fill"
-            objectFit="fill"
+            objectFit="cover"
           />
           <Carousel.Caption>
             <h3 className={css.carouselCaption}>
@@ -158,15 +159,29 @@ function About() {
       <div className={css.bottomContainer}>
         <div className={css.infoContainer}>
           <GiFruitBowl className={css.donateicon} />
-          <button className={css.button}>Our Product</button>
+          <Link href="/browse" passHref>
+            <button className={css.button}>Our Product</button>
+          </Link>
         </div>
         <div className={css.infoContainer}>
           <FaHandsHelping className={css.donateicon} />
-          <button className={css.button}>Get Involved</button>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.foodcycle.org.uk/get-involved/volunteer/"
+          >
+            <button className={css.button}>Get Involved</button>
+          </a>
         </div>
         <div className={css.infoContainer}>
           <BiDonateHeart className={css.donateicon} />
-          <button className={css.button}>Make a Donation</button>
+          <a
+            target="_blank"
+            href="https://buy.stripe.com/test_5kAbMq0ng3Fr70Q6oq"
+            rel="noopener noreferrer"
+          >
+            <button className={css.button}>Make a Donation</button>
+          </a>
         </div>
       </div>
     </div>

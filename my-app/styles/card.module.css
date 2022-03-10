@@ -6,6 +6,7 @@
   padding-left: 2vw;
   padding-right: 2vw;
   text-align: center;
+  font-family: "Roboto";
 }
 
 @media screen and (max-width: 600px) {
