@@ -2,11 +2,13 @@ import css from "../styles/about.module.css";
 import { Carousel } from "react-bootstrap";
 import Image from "next/image";
 import Head from "next/head";
+import foodwaste from "/public/images/aboutPageImages/foodwaste.jpeg";
 import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg";
-import Vegimage2 from "/public/images/aboutPageImages/Vegpic.jpeg";
+import carouselImage1 from "/public/images/aboutPageImages/carouselImage1.jpg";
+import carouselImage2 from "/public/images/aboutPageImages/carouselImage2.jpg";
 import { BiDonateHeart } from "react-icons/bi";
-import Helpinghand from "/public/images/aboutPageImages/helpinghand.png";
-import SalvegIcon from "/public/images/aboutPageImages/salveg.png";
+import { GiFruitBowl } from "react-icons/gi";
+import { FaHandsHelping } from "react-icons/fa";
 
 function About() {
   return (
@@ -17,7 +19,7 @@ function About() {
       <Carousel
         style={{
           position: "relative",
-          width: "50%",
+          width: "85%",
           margin: "0 auto",
         }}
       >
@@ -31,7 +33,7 @@ function About() {
         >
           <Image
             className="d-block w-100"
-            src={Farmwaste}
+            src={foodwaste}
             alt="First slide"
             layout="fill"
             objectFit="fill"
@@ -54,7 +56,7 @@ function About() {
         >
           <Image
             className="d-block w-100"
-            src={Vegimage2}
+            src={carouselImage1}
             alt="Second slide"
             layout="fill"
             objectFit="fill"
@@ -77,7 +79,7 @@ function About() {
         >
           <Image
             className="d-block w-100"
-            src={Vegimage2}
+            src={carouselImage2}
             alt="Third slide"
             layout="fill"
             objectFit="fill"
@@ -99,10 +101,10 @@ function About() {
           <Image
             className={css.contentImage}
             id={css.image}
-            src={Vegimage2}
+            src={Farmwaste}
             alt="Card image cap"
-            width={400}
-            height={300}
+            width={600}
+            height={500}
           ></Image>
           <div className={css.textContent}>
             <h2 className={css.contentTitle}>
@@ -125,10 +127,10 @@ function About() {
           <Image
             className={css.contentImage}
             id={css.image}
-            src={Vegimage2}
+            src={Farmwaste}
             alt="Card image cap"
-            width={400}
-            height={300}
+            width={600}
+            height={500}
           ></Image>
           <div className={css.textContent}>
             <h2 className={css.contentTitle}>You can make a difference</h2>
@@ -155,23 +157,11 @@ function About() {
       </div>
       <div className={css.bottomContainer}>
         <div className={css.infoContainer}>
-          <Image
-            className={css.image1}
-            src={SalvegIcon}
-            alt="Salveg"
-            width={200}
-            height={200}
-          />
-          <button className={css.button}>SalVeg our fruit/veg</button>
+          <GiFruitBowl className={css.donateicon} />
+          <button className={css.button}>Our Product</button>
         </div>
         <div className={css.infoContainer}>
-          <Image
-            className={css.image2}
-            src={Helpinghand}
-            alt="Get involved image"
-            width={200}
-            height={200}
-          />
+          <FaHandsHelping className={css.donateicon} />
           <button className={css.button}>Get Involved</button>
         </div>
         <div className={css.infoContainer}>
