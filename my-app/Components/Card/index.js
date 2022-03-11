@@ -12,7 +12,7 @@ const Vegcard = ({ data, area }) => {
       <div className={css.container}>
         <Row
           style={{ display: "flex", justifyContent: "center" }}
-          xs={2}
+          xs={1}
           s={2}
           md={2}
           lg={5}
@@ -104,7 +104,7 @@ const Vegcard = ({ data, area }) => {
         <Row
           style={{ display: "flex", justifyContent: "center" }}
           id="cardContainer"
-          xs={2}
+          xs={1}
           s={2}
           md={2}
           lg={5}
@@ -192,7 +192,7 @@ const Vegcard = ({ data, area }) => {
         <Row
           style={{ display: "flex", justifyContent: "center" }}
           id="cardContainer"
-          xs={2}
+          xs={1}
           s={2}
           md={2}
           lg={5}
