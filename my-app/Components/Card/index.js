@@ -61,7 +61,11 @@ const Vegcard = ({ data, area }) => {
                     <div style={{ textAlign: "center" }}>
                       <Card.Text>{data[idx]?.description}</Card.Text>
                       <Card.Text>{data[idx]?.location}</Card.Text>
-                      <Card.Text>£{data[idx]?.price}</Card.Text>
+                      {data[idx].price === "0" ? (
+                        <Card.Text>Free</Card.Text>
+                      ) : (
+                        <Card.Text>£{data[idx]?.price}</Card.Text>
+                      )}
                     </div>
                   </div>
                   <Accordion>
@@ -149,7 +153,11 @@ const Vegcard = ({ data, area }) => {
                     <div style={{ textAlign: "center" }}>
                       <Card.Text>{data[idx]?.description}</Card.Text>
                       <Card.Text>{data[idx]?.location}</Card.Text>
-                      <Card.Text>£{data[idx]?.price}</Card.Text>
+                      {data[idx].price === "0" ? (
+                        <Card.Text>Free</Card.Text>
+                      ) : (
+                        <Card.Text>£{data[idx]?.price}</Card.Text>
+                      )}
                     </div>
                   </div>
                   <Accordion>
@@ -222,7 +230,11 @@ const Vegcard = ({ data, area }) => {
                   </Card.Text>
                   <Card.Text>{found[idx]?.description}</Card.Text>
                   <Card.Text>{found[idx]?.location}</Card.Text>
-                  <Card.Text>£{found[idx]?.price}</Card.Text>
+                  {found[idx].price === "0" ? (
+                    <Card.Text>Free</Card.Text>
+                  ) : (
+                    <Card.Text>£{found[idx]?.price}</Card.Text>
+                  )}
                   <Accordion>
                     <Accordion.Item
                       style={{
