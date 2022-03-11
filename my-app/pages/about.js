@@ -4,6 +4,7 @@ import Image from "next/image";
 import Head from "next/head";
 import foodwaste from "/public/images/aboutPageImages/foodwaste.jpeg";
 import Farmwaste from "/public/images/aboutPageImages/farmwaste.jpeg";
+import volunteer from "/public/images/aboutPageImages/volunteer.png";
 import carouselImage1 from "/public/images/aboutPageImages/carouselImage1.jpg";
 import carouselImage2 from "/public/images/aboutPageImages/carouselImage2.jpg";
 import { BiDonateHeart } from "react-icons/bi";
@@ -113,14 +114,14 @@ function About() {
             </h2>
             <p>
               It&apos;s time for us to comprehend that food comes in all
-              different colours, shapes and size. Increasingly in the UK, our
+              different colours, shapes and sizes. Increasingly in the UK, our
               food system prizes uniformity over taste and the environment,
-              which means that fruit and vegetables that look slightly out of
-              place in supermarkets&apos; standards are wasted and ignored. The
-              reality is that we live in a world where on-demand everything is
-              the norm. This means farmers are left with surplus produce, If we
-              want berries in winter and Parsnips in summer, we can walk into
-              almost any supermarket and it&apos;s available.
+              which means that fruit and vegetables that do not fit in with
+              supermarkets&apos; standards are wasted and ignored. The reality
+              is that we live in a world where on-demand everything is the norm.
+              This means farmers are left with surplus produce, if we want
+              berries in winter and parsnips in summer, we can walk into almost
+              any supermarket and it&apos;s available.
             </p>
           </div>
         </div>
@@ -128,7 +129,7 @@ function About() {
           <Image
             className={css.contentImage}
             id={css.image}
-            src={Farmwaste}
+            src={volunteer}
             alt="Card image cap"
             width={600}
             height={500}
@@ -136,16 +137,13 @@ function About() {
           <div className={css.textContent}>
             <h2 className={css.contentTitle}>You can make a difference</h2>
             <p>
-              It&apos;s time for us to comprehend that food comes in all
-              different colours, shapes and size. shapless not tasteless..
-              Increasingly in the UK, our food system prizes uniformity over
-              taste and the environment, which means that fruit and vegetables
-              that look slightly out of place in supermarkets&apos; standards
-              are wasted and ignored. The reality is that we live in a world
-              where on-demand everything is the norm. This means farmers are
-              left with surplus produce, If we want berries in winter and
-              Parsnips in summer, we can walk into almost any supermarket and
-              it&apos;s available.
+              You can use the SalVeg platform to connect with farmers and local
+              growers within your community to help prevent food that would have
+              otherwise gone to waste. You could also begin to grow your own
+              food - any leftovers could end up on SalVeg, ready to go to a new
+              plate rather than wasted. Even if that&apos;s not an option,
+              spreading the word about the amount of food that is wasted can be
+              enough to inspire change.
             </p>
           </div>
         </div>
