@@ -41,7 +41,7 @@ button:focus {
 }
 
 .contentWrap {
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 ::selection {
@@ -55,6 +55,28 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
+  border: none;
+  outline: none;
+}
+
+input[type="number"] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+input[type="number"]:focus {
+  border: none;
+  outline: none;
+}
+
+input[type="tel"] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+input[type="tel"]:focus {
   border: none;
   outline: none;
 }

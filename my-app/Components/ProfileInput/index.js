@@ -49,7 +49,7 @@ const ProfileInput = () => {
         body: JSON.stringify(newUser),
       });
       const responseMessage = await response.json();
-      console.log(responseMessage);
+      // console.log(responseMessage);
     }
     createUser();
     alert("Thank you, your profile has been saved. You will be redirected.");
@@ -103,7 +103,8 @@ const ProfileInput = () => {
           <div className={css.inputContainer}>
             <input
               className={css.input}
-              type="text"
+              type="tel"
+              pattern="[0-9]{11}"
               id="phoneNumber"
               name="phoneNumber"
               value={phoneNumber}

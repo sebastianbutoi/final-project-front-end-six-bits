@@ -15,7 +15,7 @@ const PostInput = () => {
     quantity: "",
     location: "",
     price: 0,
-    date: "",
+    date: calculateDate(),
   });
 
   const [posts, setPosts] = useState([]);
@@ -51,11 +51,13 @@ const PostInput = () => {
         body: JSON.stringify(formData),
       });
       const responseMessage = await response.json();
-      console.log(responseMessage);
+      // console.log(responseMessage);
       setPosts([...posts, { ...responseMessage.payload[0] }]);
     }
     postData();
-    // console.log(formData);
+
+    e.target.reset();
+    resetInputFields();
   };
 
   const deletePost = (post_id) => {
@@ -65,7 +67,7 @@ const PostInput = () => {
         method: "DELETE",
       });
       const responseMessage = await response.json();
-      console.log(responseMessage);
+      // console.log(responseMessage);
     }
     remove();
     const newList = posts.filter((post) => post.post_id !== post_id);
@@ -73,6 +75,26 @@ const PostInput = () => {
   };
 
   // console.log(formData);
+
+  const resetInputFields = () => {
+    setFormData({
+      auth_id: user.sub,
+      title: "",
+      description: "",
+      quantity: "",
+      location: "",
+      price: 0,
+      date: calculateDate(),
+    });
+  };
+
+  function calculateDate() {
+    const today = new Date();
+    const dd = String(today.getDate());
+    const mm = String(today.getMonth() + 1);
+    const yyyy = today.getFullYear();
+    return dd + "/" + mm + "/" + yyyy;
+  }
 
   return (
     <div className={css.container}>
@@ -183,7 +205,9 @@ const PostInput = () => {
           <br></br>
           <div className={css.inputContainer}>
             <input
-              type="text"
+              min="0"
+              step=".01"
+              type="number"
               id="price"
               name="price"
               value={price}
@@ -193,7 +217,7 @@ const PostInput = () => {
           </div>
           <br />
           <br />
-          <label htmlFor="start">
+          {/* <label htmlFor="start">
             <span className={css.date}>Date: </span>
           </label>
           <input
@@ -206,7 +230,7 @@ const PostInput = () => {
             max="2022-12-31"
             required
             onChange={onChange}
-          />
+          /> */}
           {/* {"*"} */}
           <button className={css.addPost} type="submit">
             Add
@@ -214,7 +238,7 @@ const PostInput = () => {
         </form>
       </div>
       <div className={css.postDisplay}>
-        <h1>Your posts</h1>
+        <h1 style={{ fontFamily: "Chewy" }}>Your posts</h1>
         <UserPost data={posts} action={deletePost} />{" "}
       </div>
     </div>

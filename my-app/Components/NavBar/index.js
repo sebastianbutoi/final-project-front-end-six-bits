@@ -21,6 +21,7 @@ function Navbar() {
               height="50"
               width="200"
               priority="true"
+              objectFit="contain"
             />
           </a>
         </Link>

@@ -16,7 +16,7 @@ function Home() {
       <Head>
         <title>SalVeg</title>
       </Head>
-      
+
       <div className={css.rightSide}>
         <div className={css.titleText}>
           <span>Shapeless </span>
@@ -31,17 +31,18 @@ function Home() {
           <button className={css.link}>Get Started</button>
         </Link>
       </div>
-       
+
       <div className={css.leftSide}>
         <Image
+          className={css.homeImage1}
           src={homeImage1}
           alt={"vegetables"}
           height={600}
           width={700}
+          objectFit="contain"
         ></Image>
       </div>
     </div>
-      
   );
 }
 export default Home;
