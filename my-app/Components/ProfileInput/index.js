@@ -49,7 +49,7 @@ const ProfileInput = () => {
         body: JSON.stringify(newUser),
       });
       const responseMessage = await response.json();
-      console.log(responseMessage);
+      // console.log(responseMessage);
     }
     createUser();
     alert("Thank you, your profile has been saved. You will be redirected.");

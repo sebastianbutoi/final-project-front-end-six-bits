@@ -51,7 +51,7 @@ const PostInput = () => {
         body: JSON.stringify(formData),
       });
       const responseMessage = await response.json();
-      console.log(responseMessage);
+      // console.log(responseMessage);
       setPosts([...posts, { ...responseMessage.payload[0] }]);
     }
     postData();
@@ -67,7 +67,7 @@ const PostInput = () => {
         method: "DELETE",
       });
       const responseMessage = await response.json();
-      console.log(responseMessage);
+      // console.log(responseMessage);
     }
     remove();
     const newList = posts.filter((post) => post.post_id !== post_id);
