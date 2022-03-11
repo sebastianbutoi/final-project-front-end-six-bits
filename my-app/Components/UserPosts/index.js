@@ -55,7 +55,11 @@ function UserPost({ data, action }) {
                     </Card.Text>
                     <Card.Text>{data[idx]?.description}</Card.Text>
                     <Card.Text>{data[idx]?.location}</Card.Text>
-                    <Card.Text>£{data[idx]?.price}</Card.Text>
+                    {data[idx].price === "0" ? (
+                      <Card.Text>Free</Card.Text>
+                    ) : (
+                      <Card.Text>£{data[idx]?.price}</Card.Text>
+                    )}
                   </Card.Body>
                 </Card>
               </Col>

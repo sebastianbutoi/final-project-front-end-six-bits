@@ -238,7 +238,7 @@ const PostInput = () => {
         </form>
       </div>
       <div className={css.postDisplay}>
-        <h1>Your posts</h1>
+        <h1 style={{ fontFamily: "Chewy" }}>Your posts</h1>
         <UserPost data={posts} action={deletePost} />{" "}
       </div>
     </div>
