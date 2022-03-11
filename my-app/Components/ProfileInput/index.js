@@ -103,7 +103,8 @@ const ProfileInput = () => {
           <div className={css.inputContainer}>
             <input
               className={css.input}
-              type="text"
+              type="tel"
+              pattern="[0-9]{11}"
               id="phoneNumber"
               name="phoneNumber"
               value={phoneNumber}

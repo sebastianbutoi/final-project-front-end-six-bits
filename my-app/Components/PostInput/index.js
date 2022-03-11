@@ -205,7 +205,9 @@ const PostInput = () => {
           <br></br>
           <div className={css.inputContainer}>
             <input
-              type="text"
+              min="0"
+              step=".01"
+              type="number"
               id="price"
               name="price"
               value={price}

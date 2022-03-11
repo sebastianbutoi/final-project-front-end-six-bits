@@ -47,13 +47,15 @@ function UserPost({ data, action }) {
                       fontWeight: "bold",
                     }}
                   >
-                    <Card.Title>
+                    <Card.Title style={{ fontSize: "40px", color: "#1f5300" }}>
                       {data[idx]?.quantity} {data[idx]?.title}
                     </Card.Title>
+                    <Card.Text style={{ fontStyle: "italic", opacity: "0.8" }}>
+                      Submitted on {data[idx]?.date}
+                    </Card.Text>
                     <Card.Text>{data[idx]?.description}</Card.Text>
-                    <Card.Text>{data[idx]?.date}</Card.Text>
-                    <Card.Text>£{data[idx]?.price}</Card.Text>
                     <Card.Text>{data[idx]?.location}</Card.Text>
+                    <Card.Text>£{data[idx]?.price}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
