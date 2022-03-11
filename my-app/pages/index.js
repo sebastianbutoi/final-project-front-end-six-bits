@@ -39,6 +39,7 @@ function Home() {
           alt={"vegetables"}
           height={600}
           width={700}
+          objectFit="contain"
         ></Image>
       </div>
     </div>

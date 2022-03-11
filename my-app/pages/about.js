@@ -133,6 +133,7 @@ function About() {
             alt="Card image cap"
             width={600}
             height={500}
+            objectFit="contain"
           ></Image>
           <div className={css.textContent}>
             <h2 className={css.contentTitle}>You can make a difference</h2>
