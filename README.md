@@ -1,4 +1,5 @@
-![logo](https://user-images.githubusercontent.com/93525369/156549896-6ba5c047-9158-4497-99eb-846979a4c738.png)
+
+![logo](https://user-images.githubusercontent.com/93525369/157888177-96022560-68ce-473f-8c9a-fd497ad374ba.png)
 
 # SalVeg
 
