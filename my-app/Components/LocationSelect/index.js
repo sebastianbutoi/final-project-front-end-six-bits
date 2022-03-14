@@ -8,9 +8,11 @@ export default function LocationSelect({ handleOnChange }) {
   return (
     <Box>
       <FormControl>
-        <InputLabel variant="standard" htmlFor="uncontrolled-native">
-          Location
-        </InputLabel>
+        <label>Location:</label>
+        <InputLabel
+          variant="standard"
+          htmlFor="uncontrolled-native"
+        ></InputLabel>
         <NativeSelect
           onChange={handleOnChange}
           defaultValue={"-"}
@@ -19,7 +21,7 @@ export default function LocationSelect({ handleOnChange }) {
             id: "uncontrolled-native",
           }}
         >
-          <option value={""}></option>
+          <option value={""}>All</option>
           <option value={"London"}>London</option>
           <option value={"Torquay"}>Torquay</option>
           <option value={"Birmingham"}>Birmingham</option>
