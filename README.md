@@ -3,16 +3,20 @@
 
 # SalVeg
 
-This repo contains the front end for SalVeg - a web application created by Team Six Bits for our final 4 week project at the School of Code!
+This repo contains the **Front-End** for SalVeg. 
+
+SalVeg is a web application created by Team Six Bits for the final 4 week project at the School of Code (Nov 2021 - Mar 2022).
 
 ## Description
 
-We were given a very open-ended brief - to solve a problem. <br></br>
+We were given a very open-ended brief - to solve a problem.
+
 With this in mind, we decided to put our efforts towards solving the problem of food waste.
 
 ## Our Problem Statement
 
-> Of all fresh food that's produced, roughly a third of it is wasted, from farms and home growers. Despite supermarkets high cosmetic standards, a significant amount of consumers are prepared to buy wonky or otherwise edible vegetables, but there is no easy way to communicate with producers.
+> Of all fresh food that's produced, roughly a third of it is wasted.
+Despite supermarkets' high cosmetic standards, a consumers are prepared to buy wonky or otherwise edible vegetables, but there is no easy way to communicate between producers and consumers.
 
 ## Our Solution
 
