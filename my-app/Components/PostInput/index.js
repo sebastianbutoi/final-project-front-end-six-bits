@@ -138,7 +138,7 @@ const PostInput = () => {
           <br />
           <label htmlFor="Description">
             Description{" "}
-            <span className={css.freeText}>100 characters maximum</span>
+            <span className={css.freeText}>50 characters maximum</span>
           </label>
           <br></br>
           <div className={css.inputContainer}>
@@ -151,7 +151,7 @@ const PostInput = () => {
               autoComplete="off"
               required
               onChange={onChange}
-              maxLength="100"
+              maxLength="50"
             ></input>
           </div>
           <br />
