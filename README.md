@@ -57,3 +57,7 @@ We created an app that works as a platform to connect people who have excess fre
 
 [Back-end-ReadMe](https://github.com/SchoolOfCode/final-project-api-six-bits.git)
 
+## You can find the deployed website here!
+
+[SalVeg](https://salveg.netlify.app/)
+
