@@ -1,26 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
-
-html,
-body {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  font-family: "Roboto", sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Courgette&family=Roboto:wght@700&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+} */
+
+/* button:hover,
+button:focus {
+  background: transparent;
+} */
+
+button:focus {
+  outline: none;
+}
 #__next {
   display: flex;
   flex-direction: column;
@@ -30,12 +37,46 @@ a {
 .pageContainer {
   position: relative;
   min-height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 
 .contentWrap {
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 ::selection {
   background-color: #f7c151;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+input[type="text"]:focus {
+  border: none;
+  outline: none;
+}
+
+input[type="number"] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+input[type="number"]:focus {
+  border: none;
+  outline: none;
+}
+
+input[type="tel"] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+input[type="tel"]:focus {
+  border: none;
+  outline: none;
 }

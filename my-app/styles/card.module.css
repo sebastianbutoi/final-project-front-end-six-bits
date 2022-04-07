@@ -1,15 +1,33 @@
-.cardTitle {
-  padding: 1rem;
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Courgette&family=Roboto:wght@700&display=swap");
+.container {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  text-align: center;
+  font-family: "Roboto";
 }
 
-.cardDescription {
-  padding: 0 1rem;
+.missingText {
+  font-family: "Chewy";
+  font-size: 50px;
 }
 
-.card:hover {
-  transform: scale(1.02);
+@media screen and (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, maxmin(14rem, 16rem));
+  }
+  .card {
+    flex-direction: column;
+    text-align: center;
+    min-width: 14rem;
+  }
+
+  .missingText {
+    font-size: 24px;
+  }
 }
 
-.cardBody {
-  position: "relative";
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }

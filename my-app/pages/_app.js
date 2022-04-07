@@ -1,12 +1,15 @@
-import "../styles/globals.css";
 import Layout from "../Components/Layout";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/globals.css";
+import { UserProvider } from "@auth0/nextjs-auth0";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <UserProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </UserProvider>
   );
 }
 

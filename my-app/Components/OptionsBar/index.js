@@ -1,13 +1,15 @@
 import css from "../../styles/optionsbar.module.css";
+import SubmitModal from "../SubmitModal";
+import LocationSelect from "../LocationSelect";
 
-function OptionsBar() {
+function OptionsBar({ handleOnChange }) {
   return (
     <div className={css.options}>
-      <p>Location</p>
-      <p>All</p>
+      <LocationSelect handleOnChange={handleOnChange} />
+      {/* <p>All</p>
       <p>For Sale</p>
       <p>For Free</p>
-      <button>Add Post</button>
+      <SubmitModal /> */}
     </div>
   );
 }
